@@ -13,6 +13,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PrometeoCarController : MonoBehaviour
 {
@@ -27,10 +28,10 @@ public class PrometeoCarController : MonoBehaviour
       [Range(10, 120)]
       public int maxReverseSpeed = 45; //The maximum speed that the car can reach while going on reverse in km/h.
       [Range(1, 10)]
-      public int accelerationMultiplier = 2; // How fast the car can accelerate. 1 is a slow acceleration and 10 is the fastest.
+      public int accelerationMultiplier = 5; // How fast the car can accelerate. 1 is a slow acceleration and 10 is the fastest.
       [Space(10)]
-      [Range(10, 45)]
-      public int maxSteeringAngle = 27; // The maximum angle that the tires can reach while rotating the steering wheel.
+      [Range(10, 100)]
+      public int maxSteeringAngle = 100; // The maximum angle that the tires can reach while rotating the steering wheel.
       [Range(0.1f, 1f)]
       public float steeringSpeed = 0.5f; // How fast the steering wheel turns.
       [Space(10)]
@@ -91,7 +92,7 @@ public class PrometeoCarController : MonoBehaviour
       [Space(10)]
       //The following variable lets you to set up a UI text to display the speed of your car.
       public bool useUI = false;
-      public Text carSpeedText; // Used to store the UI object that is going to show the speed of the car.
+      public TMP_Text carSpeedText; // Used to store the UI object that is going to show the speed of the car.
 
     //SOUNDS
 
@@ -520,13 +521,13 @@ public class PrometeoCarController : MonoBehaviour
         if(Mathf.RoundToInt(carSpeed) < maxSpeed){
           //Apply positive torque in all wheels to go forward if maxSpeed has not been reached.
           frontLeftCollider.brakeTorque = 0;
-          frontLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+          frontLeftCollider.motorTorque = (accelerationMultiplier * 250f) * throttleAxis;
           frontRightCollider.brakeTorque = 0;
-          frontRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+          frontRightCollider.motorTorque = (accelerationMultiplier * 250f) * throttleAxis;
           rearLeftCollider.brakeTorque = 0;
-          rearLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+          rearLeftCollider.motorTorque = (accelerationMultiplier * 250f) * throttleAxis;
           rearRightCollider.brakeTorque = 0;
-          rearRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+          rearRightCollider.motorTorque = (accelerationMultiplier * 250f) * throttleAxis;
         }else {
           // If the maxSpeed has been reached, then stop applying torque to the wheels.
           // IMPORTANT: The maxSpeed variable should be considered as an approximation; the speed of the car
