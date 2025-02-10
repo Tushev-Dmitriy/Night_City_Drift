@@ -2,15 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
-using UnityEngine.UI;
+using Zenject;
 
 public class UI_Controller : MonoBehaviour
 {
-    [SerializeField] TMP_Text speedText;
+    [SerializeField] PrometeoCarController carController;
 
-    private void OnEnable()
+    UI_Manager _uiManager;
+    
+    [Inject]
+    public void Construct(UI_Manager ui_Manager)
     {
-        EventManager.ChangeText(speedText.text);
+        _uiManager = ui_Manager;
+    } 
+
+    private void Start()
+    {
+        if (_uiManager == null)
+        {
+            Debug.LogError("UI_Manager is not injected!");
+            return;
+        }
+
+        if (carController == null)
+        {
+            Debug.LogError("CarController is not assigned!");
+            return;
+        }
+
+        carController.carSpeedText = _uiManager.CheckTest();
     }
 }
