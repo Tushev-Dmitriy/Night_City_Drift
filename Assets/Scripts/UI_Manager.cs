@@ -7,7 +7,12 @@ public class UI_Manager : MonoBehaviour
 {
     [SerializeField] TMP_Text speedText;
 
-    public TMP_Text CheckTest()
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public TMP_Text CheckSpeedText()
     {
         return speedText;
     }

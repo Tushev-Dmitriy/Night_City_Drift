@@ -1,35 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
-using Zenject;
 
 public class UI_Controller : MonoBehaviour
 {
     [SerializeField] PrometeoCarController carController;
-
     UI_Manager _uiManager;
-    
-    [Inject]
-    public void Construct(UI_Manager ui_Manager)
-    {
-        _uiManager = ui_Manager;
-    } 
 
     private void Start()
     {
-        if (_uiManager == null)
-        {
-            Debug.LogError("UI_Manager is not injected!");
-            return;
-        }
+        _uiManager = FindObjectOfType<UI_Manager>();
 
-        if (carController == null)
+        if (_uiManager != null)
         {
-            Debug.LogError("CarController is not assigned!");
-            return;
+            UpdateSpeedText();
         }
+    }
 
-        carController.carSpeedText = _uiManager.CheckTest();
+    void UpdateSpeedText()
+    {
+        carController.carSpeedText = _uiManager.CheckSpeedText();
     }
 }
