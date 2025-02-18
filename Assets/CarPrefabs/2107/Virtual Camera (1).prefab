@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 932623587668041260}
   - component: {fileID: 4045169097272311609}
   - component: {fileID: 2160448603748852451}
-  - component: {fileID: 5171951468246936728}
+  - component: {fileID: 8090352322064623819}
   m_Layer: 0
   m_Name: Virtual Camera (1)
   m_TagString: Untagged
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Damping: 0
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
---- !u!114 &5171951468246936728
+--- !u!114 &8090352322064623819
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d70cc20219cd84593f67d248eafe36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Offset: {x: -0.6, y: 0, z: 4.8}
+  m_Offset: {x: 0, y: -0.7, z: -0.3}
   m_ApplyAfter: 1
   m_PreserveComposition: 0
 --- !u!1 &6876841815294454673

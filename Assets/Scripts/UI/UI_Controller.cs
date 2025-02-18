@@ -22,4 +22,9 @@ public class UI_Controller : MonoBehaviour
     {
         carController.carSpeedText = _uiManager.CheckSpeedText();
     }
+
+    public void SetCarController(PrometeoCarController newCarController)
+    {
+        carController = newCarController;
+    }
 }
