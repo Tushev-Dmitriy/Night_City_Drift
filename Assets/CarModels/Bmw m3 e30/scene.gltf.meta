@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: 9b928d0a9105eb242bced3a2a9d1a77d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 1
+  _deduplicateResources: 0
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 0
+  _swapUvs: 0
+  _generateLightmapUVs: 0
+  _importBlendShapeNames: 1
+  _blendShapeFrameWeight:
+    _option: 0
+    _multiplier: 1
+  _importNormals: 0
+  _importTangents: 0
+  _importCamera: 2
+  _importAnimations: 2
+  _mecanimHumanoidFlip: 0
+  _addAnimatorComponent: 0
+  _animationLoopTime: 1
+  _animationLoopPose: 0
+  _importMaterials: 1
+  _enableGpuInstancing: 0
+  _texturesReadWriteEnabled: 1
+  _generateMipMaps: 1
+  _useSceneNameIdentifier: 1
+  _textureCompression: -50
+  _gltfAsset: '<b>Generator: </b>Sketchfab-15.22.0
+
+    <b>Version: </b>2.0
+
+    
+
+    <b>Extras:
+    </b>
+
+    "author": "Martin Trafas (https://sketchfab.com/Bexxie)"
+
+    "license":
+    "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)"
+
+    "source": "https://sketchfab.com/3d-models/free-bmw-m3-e30-ac3c7013434e403e8faff87948caf422"
+
+    "title":
+    "[FREE] BMW M3 E30"
+
+'
+  optimizeGameObjects: 0
+  materials:
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  textures:
+  - {fileID: 2800000, guid: f6e3f51f320dc9f499e56c46c46eacd4, type: 3}
+  - {fileID: 2800000, guid: e0b6c4ee3b79bde4d8527d79d149af1f, type: 3}
+  - {fileID: 2800000, guid: 3ce79680a4d1a4c4d90accb4502037b9, type: 3}
+  - {fileID: 2800000, guid: 4081294286ab65d45a4932304ae07116, type: 3}
+  - {fileID: 2800000, guid: 38c82f627686aab4da25eb8b7d7c54cd, type: 3}
+  - {fileID: 2800000, guid: 594401eab9adc61438d41e6985a7e7a8, type: 3}
+  - {fileID: 2800000, guid: 619f47918d4a7fe469635a694b23d610, type: 3}
+  - {fileID: 2800000, guid: c2bb09132e371c54eb76c5a6ac5c0178, type: 3}
+  - {fileID: 2800000, guid: 6ba4a09520b051b41a08b7da0d436ceb, type: 3}
+  - {fileID: 2800000, guid: ad92a9323ce245843a8709e68b0b41ff, type: 3}
+  - {fileID: 2800000, guid: ab303db02124d3b4d9beead8634ba5ac, type: 3}
+  - {fileID: 2800000, guid: 9be4172367a445c47b19a9377e9a3d3b, type: 3}
+  - {fileID: 2800000, guid: 8b364a6c7261d9d42995e496583b07a4, type: 3}
+  - {fileID: 2800000, guid: 8080f89f98b398e4d91167eba3058784, type: 3}
+  - {fileID: 2800000, guid: 77f2c8c594acdab4a9e5ee2b2eea289a, type: 3}
+  - {fileID: 2800000, guid: 832841f10579ce34d8075b9f684c2b93, type: 3}
+  - {fileID: 2800000, guid: b42560af430c4dc41b5e1794e0278b6f, type: 3}
+  - {fileID: 2800000, guid: 958970d09ee05a649aed25d9168cb9a8, type: 3}
+  hasSceneData: 1
+  hasAnimationData: 0
+  hasMaterialData: 1
+  hasTextureData: 1
+  animations: []
+  _extensions:
+  - name: KHR_materials_clearcoat
+    supported: 1
+    used: 1
+    required: 0
+  - name: KHR_materials_emissive_strength
+    supported: 1
+    used: 1
+    required: 0
+  - name: KHR_materials_transmission
+    supported: 1
+    used: 1
+    required: 0
+  _textures:
+  - texture: {fileID: 2800000, guid: f6e3f51f320dc9f499e56c46c46eacd4, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: e0b6c4ee3b79bde4d8527d79d149af1f, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 3ce79680a4d1a4c4d90accb4502037b9, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 4081294286ab65d45a4932304ae07116, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 38c82f627686aab4da25eb8b7d7c54cd, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 594401eab9adc61438d41e6985a7e7a8, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  - texture: {fileID: 2800000, guid: 619f47918d4a7fe469635a694b23d610, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: c2bb09132e371c54eb76c5a6ac5c0178, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 6ba4a09520b051b41a08b7da0d436ceb, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  - texture: {fileID: 2800000, guid: ad92a9323ce245843a8709e68b0b41ff, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: ab303db02124d3b4d9beead8634ba5ac, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 9be4172367a445c47b19a9377e9a3d3b, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  - texture: {fileID: 2800000, guid: 8b364a6c7261d9d42995e496583b07a4, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 8080f89f98b398e4d91167eba3058784, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 77f2c8c594acdab4a9e5ee2b2eea289a, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  - texture: {fileID: 2800000, guid: 832841f10579ce34d8075b9f684c2b93, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: b42560af430c4dc41b5e1794e0278b6f, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 958970d09ee05a649aed25d9168cb9a8, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  _mainAssetIdentifier: scenes/Sketchfab_Scene
+  _importPlugins: []

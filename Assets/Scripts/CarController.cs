@@ -5,9 +5,10 @@ using Cinemachine;
 
 public class CarController : MonoBehaviour
 {
-    [Header ("Controllers")]
+    [Header ("Scene objects")]
     [SerializeField] GameObject cityObject;
     [SerializeField] GameObject uiController;
+    [SerializeField] GameObject carCamera;
 
     [Header("Car Data")]
     [SerializeField] MainCarData carData;
@@ -23,8 +24,7 @@ public class CarController : MonoBehaviour
     private void SetupCarStats()
     {
         GameObject tempCar = Instantiate(carData.carObject, cityObject.transform);
-        GameObject tempCam = Instantiate(carData.carCameraObject, cityObject.transform);
-        CinemachineVirtualCamera tempCinemachineData = tempCam.GetComponent<CinemachineVirtualCamera>();
+        CinemachineVirtualCamera tempCinemachineData = carCamera.GetComponent<CinemachineVirtualCamera>();
         tempCinemachineData.Follow = tempCar.transform.GetChild(0).transform;
         tempCinemachineData.LookAt = tempCar.transform.GetChild(0).transform;
         PrometeoCarController tempCarController = tempCar.GetComponentInChildren<PrometeoCarController>();
