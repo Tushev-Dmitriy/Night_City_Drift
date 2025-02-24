@@ -7,7 +7,6 @@ using UnityEngine;
 public class MainCarData : ScriptableObject
 {
     public GameObject carObject;
-    public GameObject carCameraObject;
     public string carName;
     public int carPrice;
     public CarCharacteristics carCharacteristics;

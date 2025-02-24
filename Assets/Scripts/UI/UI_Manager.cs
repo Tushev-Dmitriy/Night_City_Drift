@@ -11,6 +11,9 @@ public class UI_Manager : MonoBehaviour
 
     [SerializeField] TMP_Text speedText;
 
+    [Header("Car stats")]
+    [SerializeField] Slider engineSlider;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
