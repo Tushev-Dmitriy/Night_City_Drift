@@ -8,6 +8,7 @@ public class CarPodiumCotroller : MonoBehaviour
     [SerializeField] GameObject carModelPos;
 
     List<MainCarData> _carsData;
+    MainCarData _currentCar;
 
     private void Awake()
     {
@@ -22,6 +23,11 @@ public class CarPodiumCotroller : MonoBehaviour
     private void RotateCarModelPos()
     {
         carModelPos.transform.Rotate(0, 0.05f, 0);
+    }
+
+    private void SetCarData()
+    {
+
     }
 
     private void SwapCar()
