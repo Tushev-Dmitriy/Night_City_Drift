@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SetColorToCar : MonoBehaviour
 {
-    [SerializeField] private GameEvent colorChangedEvent;
+    [SerializeField] private MaterialGameEvent colorChangedEvent;
     [SerializeField] private Image materialImg;
     [SerializeField] private Button acceptColorBtn;
 
