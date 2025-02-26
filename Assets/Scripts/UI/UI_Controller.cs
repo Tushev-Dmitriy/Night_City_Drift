@@ -6,13 +6,13 @@ using UnityEngine;
 public class UI_Controller : MonoBehaviour
 {
     [SerializeField] PrometeoCarController carController;
-    UI_Manager _uiManager;
+    EventManager _eventManager;
 
     private void Start()
     {
-        _uiManager = FindObjectOfType<UI_Manager>();
+        _eventManager = FindObjectOfType<EventManager>();
 
-        if (_uiManager != null)
+        if (_eventManager != null)
         {
             UpdateSpeedText();
         }
@@ -20,7 +20,7 @@ public class UI_Controller : MonoBehaviour
 
     void UpdateSpeedText()
     {
-        carController.carSpeedText = _uiManager.CheckSpeedText();
+        carController.carSpeedText = _eventManager.CheckSpeedText();
     }
 
     public void SetCarController(PrometeoCarController newCarController)

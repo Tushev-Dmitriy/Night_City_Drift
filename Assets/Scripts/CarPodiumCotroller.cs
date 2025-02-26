@@ -4,16 +4,8 @@ using UnityEngine;
 
 public class CarPodiumCotroller : MonoBehaviour
 {
-    [SerializeField] UI_Manager uiManager;
+    [SerializeField] EventManager eventManager;
     [SerializeField] GameObject carModelPos;
-
-    List<MainCarData> _carsData;
-    MainCarData _currentCar;
-
-    private void Awake()
-    {
-        _carsData = uiManager.GetCarsData();
-    }
 
     private void Update()
     {
@@ -24,14 +16,15 @@ public class CarPodiumCotroller : MonoBehaviour
     {
         carModelPos.transform.Rotate(0, 0.05f, 0);
     }
-
-    private void SetCarData()
+    
+    public void SpawnCar(MainCarData carData)
     {
+        if (carModelPos.transform.childCount > 0)
+        {
+            Destroy(carModelPos.transform.GetChild(0).gameObject);
+        }
 
-    }
-
-    private void SwapCar()
-    {
-
+        GameObject newCarOnPodium = Instantiate(carData.carPodiumObject, carModelPos.transform);
+        newCarOnPodium.transform.localPosition = Vector3.zero;
     }
 }

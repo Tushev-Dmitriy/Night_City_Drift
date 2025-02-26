@@ -1,0 +1,113 @@
+{
+    "friendlyName": "Samsung Galaxy A55",
+    "version": 1,
+    "screens": [
+        {
+            "width": 1080,
+            "height": 2340,
+            "navigationBarHeight": 0,
+            "dpi": 390.0,
+            "orientations": [
+                {
+                    "orientation": 1,
+                    "safeArea": {
+                        "serializedVersion": "2",
+                        "x": 0.0,
+                        "y": 80.0,
+                        "width": 1080.0,
+                        "height": 2260.0
+                    },
+                    "cutouts": [
+                        {
+                            "serializedVersion": "2",
+                            "x": 490.0,
+                            "y": 0.0,
+                            "width": 100.0,
+                            "height": 80.0
+                        }
+                    ]
+                },
+                {
+                    "orientation": 3,
+                    "safeArea": {
+                        "serializedVersion": "2",
+                        "x": 80.0,
+                        "y": 0.0,
+                        "width": 2180.0,
+                        "height": 1080.0
+                    },
+                    "cutouts": [
+                        {
+                            "serializedVersion": "2",
+                            "x": 0.0,
+                            "y": 490.0,
+                            "width": 80.0,
+                            "height": 100.0
+                        }
+                    ]
+                },
+                {
+                    "orientation": 4,
+                    "safeArea": {
+                        "serializedVersion": "2",
+                        "x": 80.0,
+                        "y": 0.0,
+                        "width": 2180.0,
+                        "height": 1080.0
+                    },
+                    "cutouts": [
+                        {
+                            "serializedVersion": "2",
+                            "x": 2260.0,
+                            "y": 490.0,
+                            "width": 80.0,
+                            "height": 100.0
+                        }
+                    ]
+                }
+            ],
+            "presentation": {
+                "overlayPath": "Assets/Devices/Overlays/SamsungA55Overlay.png",
+                "borderSize": {
+                    "x": 50.0,
+                    "y": 50.0,
+                    "z": 50.0,
+                    "w": 50.0
+                }
+            }
+        }
+    ],
+    "systemInfo": {
+        "deviceModel": "Galaxy A55",
+        "deviceType": 1,
+        "operatingSystem": "Android 14",
+        "operatingSystemFamily": 0,
+        "processorCount": 8,
+        "processorFrequency": 2400,
+        "processorType": "ARM64",
+        "supportsAccelerometer": true,
+        "supportsAudio": true,
+        "supportsGyroscope": true,
+        "supportsLocationService": true,
+        "supportsVibration": true,
+        "systemMemorySize": 6144,
+        "unsupportedIdentifier": "n/a",
+        "graphicsDependentData": [
+            {
+                "graphicsDeviceType": 16,
+                "graphicsMemorySize": 512,
+                "graphicsDeviceName": "Mali-G68 MP4",
+                "graphicsDeviceVendor": "ARM",
+                "graphicsDeviceID": 0,
+                "graphicsDeviceVendorID": 0,
+                "graphicsDeviceVersion": "OpenGL ES 3.2",
+                "graphicsShaderLevel": 50,
+                "graphicsMultiThreaded": true,
+                "supportsShadows": true,
+                "supportsComputeShaders": true,
+                "supportsInstancing": true,
+                "maxTextureSize": 16384
+            }
+        ]
+    }
+}
