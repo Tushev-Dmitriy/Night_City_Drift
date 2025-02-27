@@ -10,7 +10,7 @@ public class WheelMateriallEventAdapter : MonoBehaviour
     {
         if (colorChangedEvent != null)
         {
-            GameEventListener listener = new GameEventListener();
+            GameEventListener listener = gameObject.AddComponent<GameEventListener>();
             listener.gameEvent = colorChangedEvent;
             listener.response = new UnityEvent<object>();
             listener.response.AddListener(OnMaterialReceived);
@@ -26,7 +26,7 @@ public class WheelMateriallEventAdapter : MonoBehaviour
     {
         if (colorChangedEvent != null)
         {
-            GameEventListener listener = new GameEventListener();
+            GameEventListener listener = gameObject.AddComponent<GameEventListener>();
             listener.gameEvent = colorChangedEvent; 
             listener.response = new UnityEvent<object>();
             listener.response.AddListener(OnMaterialReceived);

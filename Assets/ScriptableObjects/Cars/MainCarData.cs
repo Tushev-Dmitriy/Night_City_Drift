@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewCar", menuName = "Car")]
@@ -12,6 +13,28 @@ public class MainCarData : ScriptableObject
     public int carPrice;
     public CarCharacteristics carCharacteristics;
     public CarView carView;
+
+    public void UpgradeStats(int numOfStat)
+    {
+        switch (numOfStat)
+        {
+            case 0: //engine
+                carCharacteristics.maxSpeed = carCharacteristics.maxSpeed + 10;
+                break;
+            case 1: //angle
+                carCharacteristics.steeringAngleLvl = carCharacteristics.steeringAngleLvl + 5;
+                break;
+            case 2: //brake
+                carCharacteristics.brakeLvl = carCharacteristics.brakeLvl + 100;
+                break;
+            case 3: //nitro
+                carCharacteristics.haveNitro = true;
+                break;
+            case 4: //turbine
+                carCharacteristics.haveTurbine = true;
+                break;
+        }
+    }
 }
 
 [Serializable]

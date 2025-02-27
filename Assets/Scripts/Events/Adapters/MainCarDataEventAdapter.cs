@@ -10,7 +10,7 @@ public class MainCarDataEventAdapter : MonoBehaviour
     {
         if (carDataEvent != null)
         {
-            GameEventListener listener = new GameEventListener();
+            GameEventListener listener = gameObject.AddComponent<GameEventListener>();
             listener.gameEvent = carDataEvent;
             listener.response = new UnityEvent<object>();
             listener.response.AddListener(OnCarSwapBoolReceived);
@@ -26,7 +26,7 @@ public class MainCarDataEventAdapter : MonoBehaviour
     {
         if (carDataEvent != null)
         {
-            GameEventListener listener = new GameEventListener();
+            GameEventListener listener = gameObject.AddComponent<GameEventListener>();
             listener.gameEvent = carDataEvent; 
             listener.response = new UnityEvent<object>();
             listener.response.AddListener(OnCarSwapBoolReceived);
