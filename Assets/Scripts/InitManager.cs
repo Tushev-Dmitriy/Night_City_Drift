@@ -12,10 +12,9 @@ public class InitManager : MonoBehaviour
 
     IEnumerator LoadGame()
     {
-        AsyncOperation gameScene = SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
-        AsyncOperation uiScene = SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+        AsyncOperation uiScene = SceneManager.LoadSceneAsync(2, LoadSceneMode.Additive);
         
-        while (!gameScene.isDone && !uiScene.isDone)
+        while (!uiScene.isDone)
         {
             yield return null;
         }

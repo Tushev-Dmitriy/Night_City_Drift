@@ -9,7 +9,10 @@ public class CarPodiumCotroller : MonoBehaviour
 
     private void Update()
     {
-        RotateCarModelPos();
+        if (gameObject.activeSelf)
+        {
+            RotateCarModelPos();
+        }
     }
 
     private void RotateCarModelPos()

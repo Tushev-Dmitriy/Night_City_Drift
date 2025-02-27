@@ -15,8 +15,9 @@ public class CarController : MonoBehaviour
     [SerializeField] Color bodyColor;
     [SerializeField] Color wheelColor;
 
-    private void Awake()
+    public void CurrentCarSpawn(MainCarData currentCarData)
     {
+        carData = currentCarData;
         SetCarData(carData);
         SetupCarStats();
     }
