@@ -25,6 +25,7 @@ public class EventManager : MonoBehaviour
     public MainCarData GetCurrentCar() => currentCarData;
 
     private MainCarData currentCarData;
+    private int currentCarIndex = -1;
 
     private void Awake()
     {
@@ -35,16 +36,24 @@ public class EventManager : MonoBehaviour
     {
         if (_carsData.Count > 0 && currentCarData == null)
         {
-            currentCarData = _carsData[0];
-            OnCarSelected(currentCarData);
+            OnCarSelected(true);
         }
     }
 
-    public void OnCarSelected(MainCarData carData)
+    public void OnCarSelected(bool isIncrease)
     {
-        currentCarData = carData;
-        //speedText.text = $"0";
+        if (isIncrease)
+        {
+            currentCarIndex++;
+        } else if (currentCarIndex > 0)
+        {
+            currentCarIndex--;
+        } else
+        {
+            Debug.LogError("Индекс меньше 0");
+        }
 
+        currentCarData = _carsData[currentCarIndex];
         carPodiumCotroller.SpawnCar(currentCarData);
     }
 

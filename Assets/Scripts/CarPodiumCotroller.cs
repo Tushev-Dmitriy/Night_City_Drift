@@ -28,6 +28,5 @@ public class CarPodiumCotroller : MonoBehaviour
         }
 
         GameObject newCarOnPodium = Instantiate(carData.carPodiumObject, carModelPos.transform);
-        newCarOnPodium.transform.localPosition = Vector3.zero;
     }
 }
