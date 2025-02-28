@@ -13,6 +13,7 @@ public class EventManager : MonoBehaviour
 
     [Header("Scene objects")]
     [SerializeField] CarPodiumCotroller carPodiumCotroller;
+    [SerializeField] EngineMenuController engineMenuController;
     [SerializeField] GameObject carPodium;
 
     [Header("UI elements")]
@@ -54,6 +55,7 @@ public class EventManager : MonoBehaviour
         }
 
         currentCarData = _carsData[currentCarIndex];
+        engineMenuController.SetupCarData(currentCarData);
         carPodiumCotroller.SpawnCar(currentCarData);
     }
 

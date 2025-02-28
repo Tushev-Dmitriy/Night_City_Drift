@@ -17,7 +17,7 @@ MonoBehaviour:
   carName: BMW M3 E30
   carPrice: 15000
   carCharacteristics:
-    maxSpeed: 190
+    maxSpeed: 170
     engineLvl: 8
     steeringAngleLvl: 35
     brakeLvl: 500
