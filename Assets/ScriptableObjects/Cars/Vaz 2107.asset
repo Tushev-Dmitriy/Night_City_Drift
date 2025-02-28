@@ -17,8 +17,8 @@ MonoBehaviour:
   carName: Vaz 2107
   carPrice: 100
   carCharacteristics:
-    maxSpeed: 140
-    engineLvl: 5
+    maxSpeed: 150
+    engineLvl: 6
     steeringAngleLvl: 25
     brakeLvl: 300
     haveNitro: 0

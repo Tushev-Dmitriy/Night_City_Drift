@@ -19,7 +19,7 @@ MonoBehaviour:
   carCharacteristics:
     maxSpeed: 170
     engineLvl: 8
-    steeringAngleLvl: 35
+    steeringAngleLvl: 30
     brakeLvl: 500
     haveNitro: 0
     haveTurbine: 0

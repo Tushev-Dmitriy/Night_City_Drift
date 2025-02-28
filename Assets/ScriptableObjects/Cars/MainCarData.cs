@@ -20,6 +20,7 @@ public class MainCarData : ScriptableObject
         {
             case 0: //engine
                 carCharacteristics.maxSpeed = carCharacteristics.maxSpeed + 10;
+                carCharacteristics.engineLvl++;
                 break;
             case 1: //angle
                 carCharacteristics.steeringAngleLvl = carCharacteristics.steeringAngleLvl + 5;
