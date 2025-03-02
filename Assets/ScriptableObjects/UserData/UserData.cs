@@ -11,4 +11,9 @@ public class UserData : ScriptableObject
     {
         moneyCount = moneyCount - price;
     }
+
+    public bool CanBuy(int price)
+    {
+        return moneyCount >= price;
+    }
 }

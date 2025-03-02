@@ -1,12 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EngineMenuController : MonoBehaviour
 {
-    //TODO stats data, stats setup, mainCarData another lvls
     [Header("Engine")]
     [SerializeField] TMP_Text engineStatText;
     [SerializeField] Button enginePurchaseBtn;
@@ -31,6 +32,9 @@ public class EngineMenuController : MonoBehaviour
     [SerializeField] TMP_Text nitroStatText;
     [SerializeField] Button nitroPurchaseBtn;
     [SerializeField] TMP_Text nitroPriceText;
+
+    [Header("Events")]
+    [SerializeField] private GameEvent purchaseItemEvent;
 
     private MainCarData _currentCarData;
     private UserData _userData;
@@ -88,14 +92,12 @@ public class EngineMenuController : MonoBehaviour
 
     private void PurchaseItem(int numOfStat)
     {
-        int tempPrice;
         switch (numOfStat)
         {
             case 0: //engine
-                tempPrice = _userData.moneyCount - (_currentCarData.carCharacteristics.engineLvl * 1000);
-                if (tempPrice >= 0)
+                if (_userData.CanBuy(_currentCarData.carCharacteristics.engineLvl * 1000) && CanUpgradeStat(0))
                 {
-                    _userData.BuyItem(_currentCarData.carCharacteristics.engineLvl * 1000);
+                    purchaseItemEvent.Raise(_currentCarData.carCharacteristics.engineLvl * 1000);
                     _currentCarData.UpgradeStats(0);
                 } else
                 {
@@ -104,10 +106,9 @@ public class EngineMenuController : MonoBehaviour
                 SetupMenuData();
                 break;
             case 1: //brake
-                tempPrice = _userData.moneyCount - ((_currentCarData.carCharacteristics.brakeLvl / 100) * 1000);
-                if (tempPrice >= 0)
+                if (_userData.CanBuy((_currentCarData.carCharacteristics.brakeLvl / 100) * 1000) && CanUpgradeStat(1))
                 {
-                    _userData.BuyItem((_currentCarData.carCharacteristics.brakeLvl / 100) * 1000);
+                    purchaseItemEvent.Raise((_currentCarData.carCharacteristics.brakeLvl / 100) * 1000);
                     _currentCarData.UpgradeStats(2);
                 }
                 else
@@ -117,10 +118,9 @@ public class EngineMenuController : MonoBehaviour
                 SetupMenuData();
                 break;
             case 2: //angle
-                tempPrice = _userData.moneyCount - ((_currentCarData.carCharacteristics.steeringAngleLvl / 5) * 1000);
-                if (tempPrice >= 0)
+                if (_userData.CanBuy((_currentCarData.carCharacteristics.steeringAngleLvl / 5) * 1000) && CanUpgradeStat(2))
                 {
-                    _userData.BuyItem((_currentCarData.carCharacteristics.steeringAngleLvl / 5) * 1000);
+                    purchaseItemEvent.Raise((_currentCarData.carCharacteristics.steeringAngleLvl / 5) * 1000);
                     _currentCarData.UpgradeStats(1);
 
                 }
@@ -131,10 +131,9 @@ public class EngineMenuController : MonoBehaviour
                 SetupMenuData();
                 break;
             case 3: //turbine
-                tempPrice = _userData.moneyCount - 10000;
-                if (tempPrice >= 0)
+                if (_userData.CanBuy(10000) && CanUpgradeStat(3))
                 {
-                    _userData.BuyItem(10000);
+                    purchaseItemEvent.Raise(10000);
                     _currentCarData.UpgradeStats(3);
                 }
                 else
@@ -144,10 +143,9 @@ public class EngineMenuController : MonoBehaviour
                 SetupMenuData();
                 break;
             case 4: //nitro
-                tempPrice = _userData.moneyCount - 10000;
-                if (tempPrice >= 0)
+                if (_userData.CanBuy(10000) && CanUpgradeStat(4))
                 {
-                    _userData.BuyItem(10000);
+                    purchaseItemEvent.Raise(10000);
                     _currentCarData.UpgradeStats(4);
                 }
                 else
@@ -157,5 +155,24 @@ public class EngineMenuController : MonoBehaviour
                 SetupMenuData();
                 break;
         }
+    }
+
+    private bool CanUpgradeStat(int numOfStat)
+    {
+        switch (numOfStat)
+        {
+            case 0: //engine
+                return _currentCarData.carCharacteristics.engineLvl < _maxEngineLvl;
+            case 1: //brake
+                return _currentCarData.carCharacteristics.brakeLvl < _maxBrakeLvl;
+            case 2: //angle
+                return _currentCarData.carCharacteristics.steeringAngleLvl < _maxWheelLvl;
+            case 3: //turbine
+                return !_currentCarData.carCharacteristics.haveTurbine;
+            case 4: //nitro
+                return !_currentCarData.carCharacteristics.haveNitro;
+        }
+
+        return false;
     }
 }

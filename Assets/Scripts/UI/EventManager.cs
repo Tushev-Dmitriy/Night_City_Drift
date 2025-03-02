@@ -1,11 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-
 public class EventManager : MonoBehaviour
 {
     [Header("Cars data")]
@@ -23,6 +20,7 @@ public class EventManager : MonoBehaviour
     [SerializeField] TMP_Text speedText;
     [SerializeField] GameObject startCanvas;
     [SerializeField] GameObject inGameCanvas;
+    [SerializeField] TMP_Text moneyCountText;
 
     public TMP_Text CheckSpeedText() => speedText;
     public List<MainCarData> GetCarsData() => _carsData;
@@ -54,10 +52,11 @@ public class EventManager : MonoBehaviour
             currentCarIndex--;
         } else
         {
-            Debug.LogError("������ ������ 0");
+            Debug.LogError("Индекс меньше 0");
         }
 
         currentCarData = _carsData[currentCarIndex];
+        SetupMoneyText();
         engineMenuController.SetupCarData(currentCarData, _userData);
         carPodiumCotroller.SpawnCar(currentCarData);
     }
@@ -78,6 +77,42 @@ public class EventManager : MonoBehaviour
             currentCarData.carView.wheelColor.color = newMaterial.GetColor("_Color1");
             carPodiumCotroller.SpawnCar(currentCarData);
         }
+    }
+
+    public void OnPurchaseItem(int price)
+    {
+        if (currentCarData != null)
+        {
+            if (_userData.CanBuy(price))
+            {
+                _userData.BuyItem(price);
+                SetupMoneyText();
+
+            } else
+            {
+                Debug.LogError("Недостаточно денег");   
+            }
+        }
+    }
+
+    public void OnCarPlateChange(string text)
+    {
+        if (currentCarData != null)
+        {
+            if (_userData.CanBuy(10000))
+            {
+                currentCarData.carView.carPlate = text;
+
+            }
+            else
+            {
+                Debug.LogError("Недостаточно денег");
+            }
+        }
+    }
+    private void SetupMoneyText()
+    {
+        moneyCountText.text = _userData.moneyCount.ToString() + " ₽";
     }
 
     public void StartGameFromUI()
