@@ -1,9 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
+[Serializable]
 [CreateAssetMenu(fileName = "NewCar", menuName = "Car")]
 public class MainCarData : ScriptableObject
 {
@@ -19,22 +17,33 @@ public class MainCarData : ScriptableObject
         switch (numOfStat)
         {
             case 0: //engine
-                carCharacteristics.maxSpeed = carCharacteristics.maxSpeed + 10;
+                carCharacteristics.maxSpeed += 10;
                 carCharacteristics.engineLvl++;
+                SaveManager.Instance?.SaveData(carName);
                 break;
             case 1: //angle
-                carCharacteristics.steeringAngleLvl = carCharacteristics.steeringAngleLvl + 5;
+                carCharacteristics.steeringAngleLvl += 5;
+                SaveManager.Instance?.SaveData(carName);
                 break;
             case 2: //brake
-                carCharacteristics.brakeLvl = carCharacteristics.brakeLvl + 100;
+                carCharacteristics.brakeLvl += 100;
+                SaveManager.Instance?.SaveData(carName);
                 break;
             case 3: //nitro
                 carCharacteristics.haveNitro = true;
+                SaveManager.Instance?.SaveData(carName);
                 break;
             case 4: //turbine
                 carCharacteristics.haveTurbine = true;
+                SaveManager.Instance?.SaveData(carName);
                 break;
         }
+    }
+
+    public void SetCarPlate(string newPlate)
+    {
+        carView.carPlate = newPlate;
+        SaveManager.Instance?.SaveData(carName);
     }
 }
 
@@ -58,11 +67,12 @@ public class CarView
     public Material wheelColor;
 }
 
+[Serializable]
 public enum TypeOfBody
 {
-    Hatchback, //хэтч
-    Saloon, //седан
-    Coupe, //купе
-    Convertible, //кабриолет
-    Liftback, //лифтбэк
+    Hatchback,
+    Saloon,
+    Coupe,
+    Convertible,
+    Liftback
 }

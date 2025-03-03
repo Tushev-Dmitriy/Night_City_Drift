@@ -14,15 +14,23 @@ public class EventManager : MonoBehaviour
     [Header("Scene objects")]
     [SerializeField] CarPodiumCotroller carPodiumCotroller;
     [SerializeField] EngineMenuController engineMenuController;
+    [SerializeField] SettingsController settingsController;
     [SerializeField] GameObject carPodium;
 
-    [Header("UI elements")]
+    [Header("In game UI elements")]
     [SerializeField] TMP_Text speedText;
+    [SerializeField] TMP_Text driftText;
+    [SerializeField] TMP_Text moneyCountTextInGame;
+
+    [Header("UI objects")]
     [SerializeField] GameObject startCanvas;
     [SerializeField] GameObject inGameCanvas;
+
+    [Header("Garage UI")]
     [SerializeField] TMP_Text moneyCountText;
 
     public TMP_Text CheckSpeedText() => speedText;
+    public TMP_Text CheckDriftText() => driftText;
     public List<MainCarData> GetCarsData() => _carsData;
     public MainCarData GetCurrentCar() => currentCarData;
 
@@ -88,9 +96,10 @@ public class EventManager : MonoBehaviour
                 _userData.BuyItem(price);
                 SetupMoneyText();
 
-            } else
+            }
+            else
             {
-                Debug.LogError("Недостаточно денег");   
+                Debug.LogError("Недостаточно денег");
             }
         }
     }
@@ -101,7 +110,7 @@ public class EventManager : MonoBehaviour
         {
             if (_userData.CanBuy(10000))
             {
-                currentCarData.carView.carPlate = text;
+                currentCarData.SetCarPlate(text);
 
             }
             else
@@ -113,6 +122,7 @@ public class EventManager : MonoBehaviour
     private void SetupMoneyText()
     {
         moneyCountText.text = _userData.moneyCount.ToString() + " ₽";
+        moneyCountTextInGame.text = _userData.moneyCount.ToString() + " ₽";
     }
 
     public void StartGameFromUI()
@@ -122,6 +132,8 @@ public class EventManager : MonoBehaviour
 
     IEnumerator StartGameFromUICor()
     {
+        settingsController.SetupSound(_userData);
+
         AsyncOperation gameScene = SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
 
         while (!gameScene.isDone)
@@ -132,5 +144,12 @@ public class EventManager : MonoBehaviour
         carPodium.SetActive(false);
         startCanvas.SetActive(false);
         inGameCanvas.SetActive(true);
+    }
+
+    public void SetupGarage()
+    {
+        startCanvas.SetActive(true);
+        inGameCanvas.SetActive(false);
+        carPodium.SetActive(true);
     }
 }

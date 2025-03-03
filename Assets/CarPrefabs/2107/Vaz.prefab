@@ -574,7 +574,7 @@ AudioSource:
   m_GameObject: {fileID: 1082067770925209056}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: a9c250c91be1f784880ecfee643c7150, type: 2}
+  OutputAudioMixerGroup: {fileID: 9007551084979723860, guid: e3f134e5bb891834f984ab76923f3c8e, type: 2}
   m_audioClip: {fileID: 8300000, guid: 771ce407ce807b74885ec23ebd1e6647, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -838,6 +838,7 @@ GameObject:
   - component: {fileID: 2474727001637972713}
   - component: {fileID: 5710070614520374875}
   - component: {fileID: 7012308993125839489}
+  - component: {fileID: 2387872772129280098}
   m_Layer: 0
   m_Name: 2107
   m_TagString: Untagged
@@ -942,6 +943,21 @@ MonoBehaviour:
   carSpeed: 0
   isDrifting: 0
   isTractionLocked: 0
+--- !u!114 &2387872772129280098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260658997797203642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668e62bb8265f7c44a799478c0a4715e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _carController: {fileID: 7012308993125839489}
+  addMoneyEvent: {fileID: 11400000, guid: e4edfed63788ec945bcf30ef7377e9a8, type: 2}
+  driftText: {fileID: 0}
 --- !u!1 &1273067701943598000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2296,8 +2312,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3628303745474195891}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.38268346, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 66.56387, y: 12.884613, z: -42.618526}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 22.10001, y: 2.236165, z: -22.384619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2334,11 +2350,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 60.000004
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -4207,7 +4223,7 @@ AudioSource:
   m_GameObject: {fileID: 5232802154637026368}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: a9c250c91be1f784880ecfee643c7150, type: 2}
+  OutputAudioMixerGroup: {fileID: 9007551084979723860, guid: e3f134e5bb891834f984ab76923f3c8e, type: 2}
   m_audioClip: {fileID: 8300000, guid: f632e2ace80a32e47a2c531f64901a50, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
@@ -15512,7 +15528,7 @@ Transform:
   m_GameObject: {fileID: 7873279687195750849}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.75, z: 29}
+  m_LocalPosition: {x: 21, y: 1.75, z: 47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

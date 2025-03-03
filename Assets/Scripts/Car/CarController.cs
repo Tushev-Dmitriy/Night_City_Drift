@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-using UnityEditor.Search;
 
 public class CarController : MonoBehaviour
 {
@@ -26,16 +25,22 @@ public class CarController : MonoBehaviour
     private void SetupCarStats()
     {
         GameObject tempCar = Instantiate(carData.carObject, cityObject.transform);
+        
         CinemachineVirtualCamera tempCinemachineData = carCamera.GetComponent<CinemachineVirtualCamera>();
         tempCinemachineData.Follow = tempCar.transform.GetChild(0).transform;
         tempCinemachineData.LookAt = tempCar.transform.GetChild(0).transform;
+        
         PrometeoCarController tempCarController = tempCar.GetComponentInChildren<PrometeoCarController>();
         tempCarController.maxSpeed = carData.carCharacteristics.maxSpeed;
         tempCarController.accelerationMultiplier = carData.carCharacteristics.engineLvl;
         tempCarController.maxSteeringAngle = carData.carCharacteristics.steeringAngleLvl;
         tempCarController.brakeForce = carData.carCharacteristics.brakeLvl;
 
-        uiController.GetComponent<UI_Controller>().SetCarController(tempCarController);
+        DriftController tempDriftController = tempCar.GetComponentInChildren<DriftController>();
+
+        UI_Controller tempUIController = uiController.GetComponent<UI_Controller>();
+        tempUIController.SetCarController(tempCarController);
+        tempUIController.SetDriftController(tempDriftController);
     }
 
     public void SetCarData(MainCarData newCarData)

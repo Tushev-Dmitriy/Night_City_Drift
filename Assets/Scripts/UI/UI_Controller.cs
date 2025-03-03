@@ -7,6 +7,7 @@ public class UI_Controller : MonoBehaviour
 {
     [Header("Scripts")]
     [SerializeField] PrometeoCarController carController;
+    [SerializeField] DriftController driftController;
     [SerializeField] CarController carDataController;
 
     EventManager _eventManager;
@@ -26,6 +27,7 @@ public class UI_Controller : MonoBehaviour
     private void UpdateSpeedText()
     {
         carController.carSpeedText = _eventManager.CheckSpeedText();
+        driftController.driftText = _eventManager.CheckDriftText();
     }
 
     private void SetCurrentCar()
@@ -36,5 +38,10 @@ public class UI_Controller : MonoBehaviour
     public void SetCarController(PrometeoCarController newCarController)
     {
         carController = newCarController;
+    }
+
+    public void SetDriftController(DriftController newDriftController)
+    {
+        driftController = newDriftController;
     }
 }
