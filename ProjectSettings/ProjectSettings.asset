@@ -751,7 +751,7 @@ PlayerSettings:
     PS5: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
     QNX: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
     Stadia: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
-    Standalone: PLUGIN_YG_2;TMP_YG2;RU_YG2;UNITY_POST_PROCESSING_STACK_V2;NJSON_YG2;YandexGamesPlatform_yg;SORTIFY
+    Standalone: PLUGIN_YG_2;TMP_YG2;RU_YG2;UNITY_POST_PROCESSING_STACK_V2;NJSON_YG2;SORTIFY;Authorization_yg;AutoTranslateLangs_yg;Clipboard_yg;EnvirData_yg;Flags_yg;Fullscreen_yg;GameLabel_yg;InterstitialAdv_yg;Leaderboards_yg;Localization_yg;Metrica_yg;OpenURL_yg;Payments_yg;PlayerStats_yg;QuitGameEvent_yg;RedefinePlayerPrefs_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TV_yg;YandexGamesPlatform_yg
     VisionOS: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
     WebGL: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;NJSON_YG2;RU_YG2;Authorization_yg;AutoTranslateLangs_yg;Clipboard_yg;EnvirData_yg;Flags_yg;Fullscreen_yg;GameLabel_yg;InterstitialAdv_yg;Leaderboards_yg;Localization_yg;Metrica_yg;OpenURL_yg;Payments_yg;PlayerStats_yg;QuitGameEvent_yg;RedefinePlayerPrefs_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TV_yg
     XboxOne: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
