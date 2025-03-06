@@ -5,20 +5,33 @@ using System.Collections.Generic;
 public class TrafficCarController : MonoBehaviour
 {
     [SerializeField] private SplineFollower splineFollower;
-    [SerializeField] private float maxSpeed = 10.0f;
-    [SerializeField] private float accelerationTime = 2.0f;
-    [SerializeField] private float decelerationTime = 0.5f;
-    [SerializeField] private float safeDistance = 5.0f;
-    [SerializeField] private float minStopDistance = 2.0f;
+    [SerializeField] private float maxSpeed;
+    [SerializeField] private float accelerationTime;
+    [SerializeField] private float decelerationTime;
+    [SerializeField] private float safeDistance;
+    [SerializeField] private float minStopDistance;
+
+    public int numOfRoad;
 
     private float currentSpeed = 0.0f;
     private Collider triggerCollider;
     private HashSet<Collider> currentColliders = new HashSet<Collider>();
 
-    private void Awake()
+    private void Start()
     {
         triggerCollider = GetComponent<Collider>();
         splineFollower.followSpeed = currentSpeed;
+
+        if (numOfRoad == 0)
+        {
+            maxSpeed = 10.0f;
+        }
+        else
+        {
+            maxSpeed = 30.0f;
+            safeDistance = 100.0f;
+            minStopDistance = 30.0f;
+        }
     }
 
     private void Update()

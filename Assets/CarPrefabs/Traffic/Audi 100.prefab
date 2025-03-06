@@ -1871,7 +1871,7 @@ MonoBehaviour:
   _follow: 1
   _startPosition: 0.6169999837875366
   preserveUniformSpeedWithOffset: 0
-  _followSpeed: 10
+  _followSpeed: 0
   _followDuration: 1
   _speedModifier:
     blend: 1
@@ -1896,7 +1896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splineFollower: {fileID: 3294070529282058250}
-  maxSpeed: 10
+  maxSpeed: 30
   accelerationTime: 2
   decelerationTime: 0.5
   safeDistance: 35
