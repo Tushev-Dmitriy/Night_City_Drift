@@ -9,7 +9,7 @@ public class TrafficCarController : MonoBehaviour
     [SerializeField] private float accelerationTime = 2.0f;
     [SerializeField] private float decelerationTime = 0.5f;
     [SerializeField] private float safeDistance = 5.0f;
-    [SerializeField] private float minStopDistance = 2.0f; // Новое поле: минимальное расстояние для остановки
+    [SerializeField] private float minStopDistance = 2.0f;
 
     private float currentSpeed = 0.0f;
     private Collider triggerCollider;
@@ -70,19 +70,19 @@ public class TrafficCarController : MonoBehaviour
 
         if (obstaclePresent)
         {
-            desiredSpeed = 0.0f; // Остановка при препятствии
+            desiredSpeed = 0.0f;
         }
         else if (minDistance < minStopDistance)
         {
-            desiredSpeed = 0.0f; // Полная остановка, если слишком близко к другой машине
+            desiredSpeed = 0.0f; 
         }
         else if (minDistance < safeDistance)
         {
-            desiredSpeed = maxSpeed * (minDistance / safeDistance); // Пропорциональное замедление
+            desiredSpeed = maxSpeed * (minDistance / safeDistance);
         }
         else
         {
-            desiredSpeed = maxSpeed; // Полная скорость, если путь свободен
+            desiredSpeed = maxSpeed;
         }
 
         float rate = (desiredSpeed > currentSpeed) ? (maxSpeed / accelerationTime) : (maxSpeed / decelerationTime);
@@ -106,7 +106,7 @@ public class TrafficCarController : MonoBehaviour
         float splineLength = splineFollower.spline.CalculateLength();
 
         float deltaPercent = otherPercent - myPercent;
-        if (deltaPercent < 0.0f) deltaPercent += 1.0f; // Коррекция для замкнутого сплайна
+        if (deltaPercent < 0.0f) deltaPercent += 1.0f;
         return deltaPercent * splineLength;
     }
 }
