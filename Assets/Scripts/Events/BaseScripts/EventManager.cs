@@ -58,9 +58,9 @@ public class EventManager : MonoBehaviour
         } else if (currentCarIndex > 0)
         {
             currentCarIndex--;
-        } else
+        } else if (currentCarIndex < 0 || currentCarIndex >= _carsData.Count)
         {
-            Debug.LogError("Индекс меньше 0");
+            Debug.LogError("Индекс меньше 0 или индекс выходи за пределы листа всех машин");
         }
 
         currentCarData = _carsData[currentCarIndex];

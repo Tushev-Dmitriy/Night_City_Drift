@@ -15,3 +15,6 @@ MonoBehaviour:
   moneyCount: 479980
   carVolume: -61.467052
   musicVolume: -40
+  userCars:
+  - {fileID: 11400000, guid: 46df9f469a15fa042a6b1de3a4b217d6, type: 2}
+  - {fileID: 11400000, guid: 4ee19d873d1dd344c994ece8626226df, type: 2}
