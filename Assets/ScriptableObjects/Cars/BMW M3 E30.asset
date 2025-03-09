@@ -16,6 +16,7 @@ MonoBehaviour:
   carPodiumObject: {fileID: 4548700816785702997, guid: c99db316eb851554b889e5e4fde76d60, type: 3}
   carName: BMW M3 E30
   carPrice: 15000
+  cameraOffset: {x: 0, y: 2.5, z: 3}
   carCharacteristics:
     maxSpeed: 170
     engineLvl: 8

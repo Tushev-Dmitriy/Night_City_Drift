@@ -9,6 +9,7 @@ public class MainCarData : ScriptableObject
     public GameObject carPodiumObject;
     public string carName;
     public int carPrice;
+    public Vector3 cameraOffset;
     public CarCharacteristics carCharacteristics;
     public CarView carView;
 
@@ -29,12 +30,12 @@ public class MainCarData : ScriptableObject
                 carCharacteristics.brakeLvl += 100;
                 SaveManager.Instance?.SaveData(carName);
                 break;
-            case 3: //nitro
-                carCharacteristics.haveNitro = true;
+            case 3: //turbine
+                carCharacteristics.haveTurbine = true;
                 SaveManager.Instance?.SaveData(carName);
                 break;
-            case 4: //turbine
-                carCharacteristics.haveTurbine = true;
+            case 4: //nitro
+                carCharacteristics.haveNitro = true;
                 SaveManager.Instance?.SaveData(carName);
                 break;
         }

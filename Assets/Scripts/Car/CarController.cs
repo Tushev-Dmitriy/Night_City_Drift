@@ -29,12 +29,20 @@ public class CarController : MonoBehaviour
         CinemachineVirtualCamera tempCinemachineData = carCamera.GetComponent<CinemachineVirtualCamera>();
         tempCinemachineData.Follow = tempCar.transform.GetChild(0).transform;
         tempCinemachineData.LookAt = tempCar.transform.GetChild(0).transform;
-        
+
+        CinemachineCameraOffset tempCinemachineOffset = carCamera.GetComponent<CinemachineCameraOffset>();
+        tempCinemachineOffset.m_Offset = carData.cameraOffset;
+
         PrometeoCarController tempCarController = tempCar.GetComponentInChildren<PrometeoCarController>();
         tempCarController.maxSpeed = carData.carCharacteristics.maxSpeed;
         tempCarController.accelerationMultiplier = carData.carCharacteristics.engineLvl;
         tempCarController.maxSteeringAngle = carData.carCharacteristics.steeringAngleLvl;
         tempCarController.brakeForce = carData.carCharacteristics.brakeLvl;
+        
+        if (carData.carCharacteristics.haveTurbine)
+        {
+            tempCarController.accelerationMultiplier += 2;
+        }
 
         DriftController tempDriftController = tempCar.GetComponentInChildren<DriftController>();
 

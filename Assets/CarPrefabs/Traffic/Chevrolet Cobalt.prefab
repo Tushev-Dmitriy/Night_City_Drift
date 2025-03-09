@@ -483,6 +483,7 @@ GameObject:
   - component: {fileID: 247150119088370232}
   - component: {fileID: 4774777677945845857}
   - component: {fileID: 8943585843887400633}
+  - component: {fileID: 7714217658516422650}
   m_Layer: 0
   m_Name: Chevrolet Cobalt
   m_TagString: Untagged
@@ -600,7 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddc1a2536715a24095c464a2c394d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateMethod: 0
+  updateMethod: 1
   _spline: {fileID: 0}
   _autoUpdate: 1
   _rotationModifier:
@@ -747,6 +748,40 @@ MonoBehaviour:
   safeDistance: 35
   minStopDistance: 10
   numOfRoad: 0
+--- !u!205 &7714217658516422650
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033766084360259770}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0.70660007, z: -0.01855421}
+  m_Size: 4.591797
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.03
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 6541100296134915545}
+    - renderer: {fileID: 1428266639589015681}
+    - renderer: {fileID: 7410090053327762638}
+    - renderer: {fileID: 4575008465445194520}
+    - renderer: {fileID: 2525317217444700858}
+    - renderer: {fileID: 1983641225520656062}
+    - renderer: {fileID: 2309475548928250066}
+    - renderer: {fileID: 3132349167050137028}
+    - renderer: {fileID: 5350766185890034107}
+    - renderer: {fileID: 3531304968235129157}
+    - renderer: {fileID: 8316888912975667285}
+    - renderer: {fileID: 3510733437947450279}
+    - renderer: {fileID: 4311836497995630686}
+    - renderer: {fileID: 7783402543544308043}
+    - renderer: {fileID: 8619638482640132535}
+    - renderer: {fileID: 63698336778452606}
+  m_Enabled: 1
 --- !u!1 &2239084873728906859
 GameObject:
   m_ObjectHideFlags: 0

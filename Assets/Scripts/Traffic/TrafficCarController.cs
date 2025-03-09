@@ -16,6 +16,8 @@ public class TrafficCarController : MonoBehaviour
     private float currentSpeed = 0.0f;
     private Collider triggerCollider;
     private HashSet<Collider> currentColliders = new HashSet<Collider>();
+    private float targetSpeed; // Целевая скорость для сглаживания
+    private float smoothFactor = 0.1f; // Коэффициент сглаживания (меньше нагрузки, чем Lerp)
 
     private void Start()
     {
@@ -34,10 +36,10 @@ public class TrafficCarController : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         UpdateSpeed();
-        splineFollower.followSpeed = currentSpeed;
+        splineFollower.followSpeed = targetSpeed; // Применяем сглаженную скорость
     }
 
     private void OnTriggerEnter(Collider other)
@@ -87,7 +89,7 @@ public class TrafficCarController : MonoBehaviour
         }
         else if (minDistance < minStopDistance)
         {
-            desiredSpeed = 0.0f; 
+            desiredSpeed = 0.0f;
         }
         else if (minDistance < safeDistance)
         {
@@ -98,16 +100,11 @@ public class TrafficCarController : MonoBehaviour
             desiredSpeed = maxSpeed;
         }
 
+        // Простое сглаживание скорости без Lerp
         float rate = (desiredSpeed > currentSpeed) ? (maxSpeed / accelerationTime) : (maxSpeed / decelerationTime);
-        float deltaSpeed = rate * Time.deltaTime;
-        if (desiredSpeed > currentSpeed)
-        {
-            currentSpeed = Mathf.Min(currentSpeed + deltaSpeed, desiredSpeed);
-        }
-        else
-        {
-            currentSpeed = Mathf.Max(currentSpeed - deltaSpeed, desiredSpeed);
-        }
+        float deltaSpeed = rate * Time.fixedDeltaTime;
+        targetSpeed = Mathf.MoveTowards(targetSpeed, desiredSpeed, deltaSpeed);
+        currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, smoothFactor); // Минимальная нагрузка
     }
 
     private float CalculateDistanceToCar(TrafficCarController otherCar)

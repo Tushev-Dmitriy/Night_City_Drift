@@ -28,6 +28,7 @@ public class EventManager : MonoBehaviour
 
     [Header("Garage UI")]
     [SerializeField] TMP_Text moneyCountText;
+    [SerializeField] Animator moneyErrorAnimator;
 
     public TMP_Text CheckSpeedText() => speedText;
     public TMP_Text CheckDriftText() => driftText;
@@ -71,19 +72,25 @@ public class EventManager : MonoBehaviour
 
     public void OnBodyColorChanged(Material newMaterial)
     {
-        if (currentCarData != null)
+        if (currentCarData != null && _userData.CanBuy(5000))
         {
             currentCarData.carView.carColor.color = newMaterial.GetColor("_Color1");
             carPodiumCotroller.SpawnCar(currentCarData);
+        }
+        {
+            moneyErrorAnimator.SetTrigger("MoneyError");
         }
     }
 
     public void OnWheelColorChanged(Material newMaterial)
     {
-        if (currentCarData != null)
+        if (currentCarData != null && _userData.CanBuy(5000))
         {
             currentCarData.carView.wheelColor.color = newMaterial.GetColor("_Color1");
             carPodiumCotroller.SpawnCar(currentCarData);
+        } else
+        {
+            moneyErrorAnimator.SetTrigger("MoneyError");
         }
     }
 
@@ -99,7 +106,7 @@ public class EventManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Недостаточно денег");
+                moneyErrorAnimator.SetTrigger("MoneyError");
             }
         }
     }
@@ -115,7 +122,7 @@ public class EventManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Недостаточно денег");
+                moneyErrorAnimator.SetTrigger("MoneyError");
             }
         }
     }

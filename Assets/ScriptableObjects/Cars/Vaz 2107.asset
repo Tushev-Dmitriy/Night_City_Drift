@@ -16,13 +16,14 @@ MonoBehaviour:
   carPodiumObject: {fileID: 7873279687195750849, guid: 9c6292df21f5c764b9b74d23ff111112, type: 3}
   carName: Vaz 2107
   carPrice: 100
+  cameraOffset: {x: 0, y: 2, z: 3}
   carCharacteristics:
-    maxSpeed: 150
-    engineLvl: 6
-    steeringAngleLvl: 25
+    maxSpeed: 140
+    engineLvl: 5
+    steeringAngleLvl: 30
     brakeLvl: 300
     haveNitro: 0
-    haveTurbine: 0
+    haveTurbine: 1
   carView:
     carPlate: A123AA
     carColor: {fileID: 2100000, guid: ad59b0b88a60f2d408e1c877679a354c, type: 2}

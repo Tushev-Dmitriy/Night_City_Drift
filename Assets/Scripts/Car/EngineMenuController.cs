@@ -60,10 +60,10 @@ public class EngineMenuController : MonoBehaviour
     private void SetStatsData()
     {
         engineStatText.text = _currentCarData.carCharacteristics.engineLvl.ToString();
-        brakeStatText.text = (_currentCarData.carCharacteristics.brakeLvl/100).ToString();
-        wheelStatText.text = (_currentCarData.carCharacteristics.steeringAngleLvl/5).ToString();
+        brakeStatText.text = ((_currentCarData.carCharacteristics.brakeLvl/100)+4).ToString();
+        wheelStatText.text = ((_currentCarData.carCharacteristics.steeringAngleLvl/5)+1).ToString();
         turbineStatText.text = _currentCarData.carCharacteristics.haveTurbine ? "1" : "0";
-        turbineStatText.text = _currentCarData.carCharacteristics.haveNitro ? "1" : "0";
+        nitroStatText.text = _currentCarData.carCharacteristics.haveNitro ? "1" : "0";
     }
 
     private void SetPriceToStats()
@@ -71,8 +71,8 @@ public class EngineMenuController : MonoBehaviour
         enginePriceText.text = (_currentCarData.carCharacteristics.engineLvl * 1000).ToString() + " ₽";
         brakePriceText.text = ((_currentCarData.carCharacteristics.brakeLvl / 100) * 1000).ToString() + " ₽";
         wheelPriceText.text = ((_currentCarData.carCharacteristics.steeringAngleLvl / 5) * 1000).ToString() + " ₽";
-        turbinePriceText.text = _currentCarData.carCharacteristics.haveTurbine ? "0" : "10000 ₽";
-        nitroPriceText.text = _currentCarData.carCharacteristics.haveNitro ? "0" : "10000 ₽";
+        turbinePriceText.text = "10000 ₽";
+        nitroPriceText.text = "10000 ₽";
     }
 
     private void SetActionsToBtns()
@@ -99,9 +99,6 @@ public class EngineMenuController : MonoBehaviour
                 {
                     purchaseItemEvent.Raise(_currentCarData.carCharacteristics.engineLvl * 1000);
                     _currentCarData.UpgradeStats(0);
-                } else
-                {
-                    Debug.LogError("Недостаточно денег");
                 }
                 SetupMenuData();
                 break;
@@ -111,10 +108,6 @@ public class EngineMenuController : MonoBehaviour
                     purchaseItemEvent.Raise((_currentCarData.carCharacteristics.brakeLvl / 100) * 1000);
                     _currentCarData.UpgradeStats(2);
                 }
-                else
-                {
-                    Debug.LogError("Недостаточно денег");
-                }
                 SetupMenuData();
                 break;
             case 2: //angle
@@ -122,23 +115,15 @@ public class EngineMenuController : MonoBehaviour
                 {
                     purchaseItemEvent.Raise((_currentCarData.carCharacteristics.steeringAngleLvl / 5) * 1000);
                     _currentCarData.UpgradeStats(1);
-
-                }
-                else
-                {
-                    Debug.LogError("Недостаточно денег");
                 }
                 SetupMenuData();
                 break;
             case 3: //turbine
                 if (_userData.CanBuy(10000) && CanUpgradeStat(3))
                 {
+                    Debug.Log(CanUpgradeStat(3));
                     purchaseItemEvent.Raise(10000);
                     _currentCarData.UpgradeStats(3);
-                }
-                else
-                {
-                    Debug.LogError("Недостаточно денег");
                 }
                 SetupMenuData();
                 break;
@@ -147,10 +132,6 @@ public class EngineMenuController : MonoBehaviour
                 {
                     purchaseItemEvent.Raise(10000);
                     _currentCarData.UpgradeStats(4);
-                }
-                else
-                {
-                    Debug.LogError("Недостаточно денег");
                 }
                 SetupMenuData();
                 break;
@@ -175,4 +156,6 @@ public class EngineMenuController : MonoBehaviour
 
         return false;
     }
+
+
 }

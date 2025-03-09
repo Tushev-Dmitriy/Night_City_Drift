@@ -101,8 +101,6 @@ public class SaveManager : MonoBehaviour
         {
             string json = PlayerPrefs.GetString(localUserDataKey);
             JsonUtility.FromJsonOverwrite(json, userData);
-            Debug.Log(userData.userCars.Count);
-            Debug.Log(userData.userCars[0]);
             Debug.Log("UserData загружены локально");
         }
     }

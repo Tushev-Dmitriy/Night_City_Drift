@@ -8003,6 +8003,7 @@ GameObject:
   - component: {fileID: 3824148561300988077}
   - component: {fileID: 1870941290708292926}
   - component: {fileID: 5883466544363092215}
+  - component: {fileID: 5108824582155544999}
   m_Layer: 0
   m_Name: Volkswagen Polo
   m_TagString: Untagged
@@ -8183,7 +8184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddc1a2536715a24095c464a2c394d5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  updateMethod: 0
+  updateMethod: 1
   _spline: {fileID: 0}
   _autoUpdate: 1
   _rotationModifier:
@@ -8330,6 +8331,156 @@ MonoBehaviour:
   safeDistance: 35
   minStopDistance: 10
   numOfRoad: 0
+--- !u!205 &5108824582155544999
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5736785848794479836}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.0087890625, y: 76.03384, z: -0.001953125}
+  m_Size: 446.91016
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.03
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4106671714132390464}
+    - renderer: {fileID: 1450009071930400951}
+    - renderer: {fileID: 559265358403638411}
+    - renderer: {fileID: 8210429095824018421}
+    - renderer: {fileID: 7683183591172993500}
+    - renderer: {fileID: 7949809182425473483}
+    - renderer: {fileID: 460498735613842945}
+    - renderer: {fileID: 5191015497293802703}
+    - renderer: {fileID: 909523848608049009}
+    - renderer: {fileID: 9013577064405281451}
+    - renderer: {fileID: 6728442665344914839}
+    - renderer: {fileID: 7164874944245432208}
+    - renderer: {fileID: 5727369820230196271}
+    - renderer: {fileID: 8821710175846334104}
+    - renderer: {fileID: 266182624249574038}
+    - renderer: {fileID: 1713641635773625535}
+    - renderer: {fileID: 7221860474516316685}
+    - renderer: {fileID: 5660629886865243562}
+    - renderer: {fileID: 1139715200504200253}
+    - renderer: {fileID: 183426661097259128}
+    - renderer: {fileID: 6522238160373068452}
+    - renderer: {fileID: 8634373743090949178}
+    - renderer: {fileID: 7697681542701487264}
+    - renderer: {fileID: 5765377976993766809}
+    - renderer: {fileID: 2100823623138122069}
+    - renderer: {fileID: 2537256686623150813}
+    - renderer: {fileID: 1302553827334966302}
+    - renderer: {fileID: 1024577560710038910}
+    - renderer: {fileID: 1600897904884706932}
+    - renderer: {fileID: 6899084452049327231}
+    - renderer: {fileID: 7344526221314025014}
+    - renderer: {fileID: 5187984485094903140}
+    - renderer: {fileID: 6850869988795768665}
+    - renderer: {fileID: 5617849701654526268}
+    - renderer: {fileID: 7328389019856088738}
+    - renderer: {fileID: 8449655986098781518}
+    - renderer: {fileID: 1167445954975741113}
+    - renderer: {fileID: 3429078679653794443}
+    - renderer: {fileID: 7206789597488719923}
+    - renderer: {fileID: 6983504853792796124}
+    - renderer: {fileID: 6171213860434538951}
+    - renderer: {fileID: 2786634985177410656}
+    - renderer: {fileID: 8740155659346114623}
+    - renderer: {fileID: 7614783059643575780}
+    - renderer: {fileID: 423882692013574524}
+    - renderer: {fileID: 2567888331421937037}
+    - renderer: {fileID: 5258230810750359808}
+    - renderer: {fileID: 4887747902488717374}
+    - renderer: {fileID: 5005684419257408842}
+    - renderer: {fileID: 4432445107623207247}
+    - renderer: {fileID: 6938026075304281442}
+    - renderer: {fileID: 3080498842759371102}
+    - renderer: {fileID: 6140488637261213728}
+    - renderer: {fileID: 7946408357505724817}
+    - renderer: {fileID: 4207562402671242382}
+    - renderer: {fileID: 8358363479045303573}
+    - renderer: {fileID: 2573170205669750087}
+    - renderer: {fileID: 600027980340915514}
+    - renderer: {fileID: 5469481531779466382}
+    - renderer: {fileID: 1558819930288513170}
+    - renderer: {fileID: 1697236925414692256}
+    - renderer: {fileID: 6355792065117716597}
+    - renderer: {fileID: 5672715351270333035}
+    - renderer: {fileID: 2573492228659131561}
+    - renderer: {fileID: 3278158678652475994}
+    - renderer: {fileID: 708563505953152542}
+    - renderer: {fileID: 999487790093505516}
+    - renderer: {fileID: 6327169579862397657}
+    - renderer: {fileID: 2939735421756893704}
+    - renderer: {fileID: 8791088619288062046}
+    - renderer: {fileID: 6030914221328416578}
+    - renderer: {fileID: 172141498172199626}
+    - renderer: {fileID: 3106196760358310407}
+    - renderer: {fileID: 139176947109184400}
+    - renderer: {fileID: 117839375645401250}
+    - renderer: {fileID: 2945797950467236094}
+    - renderer: {fileID: 8564295762314330317}
+    - renderer: {fileID: 6877035958291296624}
+    - renderer: {fileID: 2471488196833102467}
+    - renderer: {fileID: 3242793726487344666}
+    - renderer: {fileID: 6323027915537112326}
+    - renderer: {fileID: 8730488133756065495}
+    - renderer: {fileID: 6174597337057581138}
+    - renderer: {fileID: 3745013603606344258}
+    - renderer: {fileID: 144651992680056379}
+    - renderer: {fileID: 2634795514558383340}
+    - renderer: {fileID: 1487054386632280039}
+    - renderer: {fileID: 241734781479470998}
+    - renderer: {fileID: 5771956346738307756}
+    - renderer: {fileID: 3573351520868952328}
+    - renderer: {fileID: 4935702592232987167}
+    - renderer: {fileID: 7696649847369404543}
+    - renderer: {fileID: 3447154499042375811}
+    - renderer: {fileID: 8157369524397607174}
+    - renderer: {fileID: 1116766552519936230}
+    - renderer: {fileID: 4488941956000601219}
+    - renderer: {fileID: 7372955456430269925}
+    - renderer: {fileID: 6371899331113360619}
+    - renderer: {fileID: 9207389707317259748}
+    - renderer: {fileID: 5413945751050760051}
+    - renderer: {fileID: 4842760291749019949}
+    - renderer: {fileID: 192915514501925759}
+    - renderer: {fileID: 2245543068169314824}
+    - renderer: {fileID: 7949071513878964826}
+    - renderer: {fileID: 3371247073959034470}
+    - renderer: {fileID: 545806055300187755}
+    - renderer: {fileID: 4898421836748102978}
+    - renderer: {fileID: 5682401166684038604}
+    - renderer: {fileID: 1263618325369491974}
+    - renderer: {fileID: 7617578815267017394}
+    - renderer: {fileID: 8744636760566859843}
+    - renderer: {fileID: 7391300681671310807}
+    - renderer: {fileID: 1977388312729339530}
+    - renderer: {fileID: 6686212835011654476}
+    - renderer: {fileID: 8330276123659192928}
+    - renderer: {fileID: 5395156185593915479}
+    - renderer: {fileID: 2251462114906408699}
+    - renderer: {fileID: 4981896773198085202}
+    - renderer: {fileID: 85883072617056626}
+    - renderer: {fileID: 2570867342718896419}
+    - renderer: {fileID: 145791091559626465}
+    - renderer: {fileID: 8035131601181820181}
+    - renderer: {fileID: 1007405489407002964}
+    - renderer: {fileID: 1974531538539372035}
+    - renderer: {fileID: 9114146022815325873}
+    - renderer: {fileID: 6166646151088182833}
+    - renderer: {fileID: 5426111772947306878}
+    - renderer: {fileID: 5451240737109100466}
+    - renderer: {fileID: 4255294760645025383}
+    - renderer: {fileID: 8786208200688861795}
+    - renderer: {fileID: 4333860029422380939}
+    - renderer: {fileID: 8703553045514976176}
+  m_Enabled: 1
 --- !u!1 &5760075379325227177
 GameObject:
   m_ObjectHideFlags: 0
