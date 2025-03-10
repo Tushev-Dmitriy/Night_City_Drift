@@ -42,7 +42,7 @@ public class MoneyIntEventAdapter : MonoBehaviour
         {
             if (data is int price)
             {
-                eventManager.OnPurchaseItem(price);
+                eventManager.OnPurchaseItem(price, false);
             }
             else
             {

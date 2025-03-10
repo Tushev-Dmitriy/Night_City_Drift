@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using YG;
 using System.Collections;
+using Newtonsoft.Json;
 
 public class SaveManager : MonoBehaviour
 {
@@ -88,7 +89,7 @@ public class SaveManager : MonoBehaviour
     {
         if (userData != null)
         {
-            string json = JsonUtility.ToJson(userData);
+            string json = JsonConvert.SerializeObject(userData);
             PlayerPrefs.SetString(localUserDataKey, json);
             PlayerPrefs.Save();
             Debug.Log("UserData сохранены локально");
@@ -100,7 +101,11 @@ public class SaveManager : MonoBehaviour
         if (PlayerPrefs.HasKey(localUserDataKey))
         {
             string json = PlayerPrefs.GetString(localUserDataKey);
-            JsonUtility.FromJsonOverwrite(json, userData);
+            UserData userDataSave = JsonConvert.DeserializeObject<UserData>(json);
+            userData.moneyCount = userDataSave.moneyCount;
+            userData.carVolume = userDataSave.carVolume;
+            userData.musicVolume = userDataSave.musicVolume;
+            userData.userCarsName = userDataSave.userCarsName;
             Debug.Log("UserData загружены локально");
         }
     }

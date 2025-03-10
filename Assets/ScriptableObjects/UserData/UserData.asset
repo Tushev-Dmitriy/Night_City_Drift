@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81380a1e5ce3d804894f6f648fe0f075, type: 3}
   m_Name: UserData
   m_EditorClassIdentifier: 
-  moneyCount: 479980
-  carVolume: -61.467052
-  musicVolume: -40
-  userCars:
-  - {fileID: 11400000, guid: 46df9f469a15fa042a6b1de3a4b217d6, type: 2}
-  - {fileID: 11400000, guid: 4ee19d873d1dd344c994ece8626226df, type: 2}
+  moneyCount: 200660
+  carVolume: 0
+  musicVolume: 0
+  userCarsName:
+  - Vaz 2107
+  - BMW M3 E30

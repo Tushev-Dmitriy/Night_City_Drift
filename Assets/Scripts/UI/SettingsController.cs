@@ -10,8 +10,8 @@ public class SettingsController : MonoBehaviour
     [SerializeField] AudioMixer mainMixer;
 
     [Header("UI")]
-    [SerializeField] Slider carMixerSlider;
     [SerializeField] Slider musicMixerSlider;
+    [SerializeField] Slider carMixerSlider;
 
     private UserData _userData;
 
@@ -23,15 +23,18 @@ public class SettingsController : MonoBehaviour
 
     public void ChangeVolume(int numOfMixer)
     {
+        float soundValue = 0;
         switch (numOfMixer)
         {
             case 0:
-                mainMixer.SetFloat("Car", carMixerSlider.value);
-                SetupSliderValue(false);
+                soundValue = musicMixerSlider.value;
+                mainMixer.SetFloat("Music", soundValue);
+                _userData.SetMusicVolume(soundValue);
                 break;
             case 1:
-                mainMixer.SetFloat("Music", musicMixerSlider.value);
-                SetupSliderValue(false);
+                soundValue = carMixerSlider.value;
+                mainMixer.SetFloat("Car", soundValue);
+                _userData.SetCarVolume(soundValue);
                 break;
         }
     }
@@ -40,14 +43,10 @@ public class SettingsController : MonoBehaviour
     {
         if (isLoad)
         {
-            carMixerSlider.value = _userData.carVolume;
             musicMixerSlider.value = _userData.musicVolume;
+            carMixerSlider.value = _userData.carVolume;
             ChangeVolume(0);
             ChangeVolume(1);
-        } else
-        {
-            _userData.SetCarVolume(carMixerSlider.value);
-            _userData.SetMusicVolume(musicMixerSlider.value);
         }
     }
 }

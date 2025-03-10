@@ -18,14 +18,14 @@ MonoBehaviour:
   carPrice: 15000
   cameraOffset: {x: 0, y: 2.5, z: 3}
   carCharacteristics:
-    maxSpeed: 170
-    engineLvl: 8
-    steeringAngleLvl: 30
-    brakeLvl: 500
-    haveNitro: 0
+    maxSpeed: 190
+    engineLvl: 10
+    steeringAngleLvl: 45
+    brakeLvl: 600
+    haveNitro: 1
     haveTurbine: 0
   carView:
-    carPlate: A123AA
+    carPlate: "\u0410001\u0410\u0410056"
     carColor: {fileID: 2100000, guid: 3ac3da1cc18f74d4c9e41568609af5c1, type: 2}
     bodyType: 1
     wheelColor: {fileID: 2100000, guid: b2f4f56826f97ba4aa3eff12e4f9e424, type: 2}
