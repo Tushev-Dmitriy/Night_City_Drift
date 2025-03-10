@@ -26,6 +26,7 @@ public class EventManager : MonoBehaviour
     [SerializeField] TMP_Text moneyCountTextInGame;
     [SerializeField] GameObject startGameBtn;
     [SerializeField] GameObject buyCarBtn;
+    [SerializeField] GameObject carStatsPanel;
 
     [Header("UI objects")]
     [SerializeField] GameObject startCanvas;
@@ -41,7 +42,7 @@ public class EventManager : MonoBehaviour
     public MainCarData GetCurrentCar() => currentCarData;
 
     private MainCarData currentCarData;
-    private int currentCarIndex = -1;
+    private int currentCarIndex = 0;
 
     private void Awake()
     {
@@ -50,34 +51,37 @@ public class EventManager : MonoBehaviour
 
     private void Start()
     {
-        if (_carsData.Count > 0 && currentCarData == null)
+        if (_carsData != null && _carsData.Count > 0)
         {
-            OnCarSelected(true);
+            currentCarIndex = 0;
+            OnCarSelected(false);
         }
     }
 
     public void OnCarSelected(bool isIncrease)
     {
-        if (isIncrease)
+        if (_carsData == null || _carsData.Count == 0)
         {
-            currentCarIndex++;
-        } else if (currentCarIndex > 0)
-        {
-            currentCarIndex--;
+            Debug.LogError("Список машин пуст");
+            return;
         }
 
-        if (currentCarIndex < 0 || currentCarIndex >= _carsData.Count)
+        if (isIncrease)
         {
-            Debug.LogError("Индекс меньше 0 или индекс выходи за пределы листа всех машин");
-        } else
-        {
-            currentCarData = _carsData[currentCarIndex];
+            currentCarIndex = Mathf.Min(currentCarIndex + 1, _carsData.Count - 1);
         }
+        else
+        {
+            currentCarIndex = Mathf.Max(currentCarIndex - 1, 0);
+        }
+
+        currentCarData = _carsData[currentCarIndex];
 
         if (_userData.userCarsName.Contains(currentCarData.carName))
         {
             SetBtnToCarAction(true);
-        } else
+        }
+        else
         {
             SetBtnToCarAction(false);
         }
@@ -91,10 +95,10 @@ public class EventManager : MonoBehaviour
     {
         if (currentCarData != null && _userData.CanBuy(5000))
         {
+            OnPurchaseItem(5000, false);
             currentCarData.carView.carColor.color = newMaterial.GetColor("_Color1");
             carPodiumCotroller.SpawnCar(currentCarData);
-        }
-        {
+        } else {
             moneyErrorAnimator.SetTrigger("MoneyError");
         }
     }
@@ -103,6 +107,7 @@ public class EventManager : MonoBehaviour
     {
         if (currentCarData != null && _userData.CanBuy(5000))
         {
+            OnPurchaseItem(5000, false);
             currentCarData.carView.wheelColor.color = newMaterial.GetColor("_Color1");
             carPodiumCotroller.SpawnCar(currentCarData);
         } else
@@ -184,10 +189,12 @@ public class EventManager : MonoBehaviour
         {
             startGameBtn.gameObject.SetActive(true);
             buyCarBtn.gameObject.SetActive(false);
+            carStatsPanel.SetActive(true);
         } else
         {
             startGameBtn.gameObject.SetActive(false);
             buyCarBtn.gameObject.SetActive(true);
+            carStatsPanel.SetActive(false);
             buyCarBtn.transform.GetChild(0).GetComponent<TMP_Text>().text = currentCarData.carPrice.ToString() + " ₽";
             buyCarBtn.GetComponent<Button>().onClick.RemoveAllListeners();
             buyCarBtn.GetComponent<Button>().onClick.AddListener(delegate { OnPurchaseItem(currentCarData.carPrice, true); });
@@ -199,5 +206,10 @@ public class EventManager : MonoBehaviour
         _userData.userCarsName.Add(currentCarData.carName);
         SetBtnToCarAction(true);
         SaveManager.Instance?.SaveUserData();
+    }
+
+    public void MoneyForYG(int money)
+    {
+        OnPurchaseItem(money, false);
     }
 }

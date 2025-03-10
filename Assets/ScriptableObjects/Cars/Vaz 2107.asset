@@ -18,8 +18,8 @@ MonoBehaviour:
   carPrice: 100
   cameraOffset: {x: 0, y: 2, z: 3}
   carCharacteristics:
-    maxSpeed: 140
-    engineLvl: 5
+    maxSpeed: 190
+    engineLvl: 10
     steeringAngleLvl: 30
     brakeLvl: 300
     haveNitro: 0

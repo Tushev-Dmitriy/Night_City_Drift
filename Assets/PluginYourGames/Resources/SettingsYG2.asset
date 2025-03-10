@@ -141,13 +141,13 @@ MonoBehaviour:
     flags: []
   InterstitialAdv:
     showFirstAdv: 1
-    interAdvInterval: 60
-    postponeCallByFail: 0
+    interAdvInterval: 300
+    postponeCallByFail: 1
     postponeCallTimer: 10
     labelAdvSimLabel: 0
   Leaderboards:
     enable: 1
-    saveScoreAnonymousPlayers: 1
+    saveScoreAnonymousPlayers: 0
     listLBSim:
     - technoName: test
       entries: '1. Max: 10
@@ -301,9 +301,9 @@ MonoBehaviour:
         score: 127000
         extraData: 
   Localization:
-    setLanguageMod: 1
+    setLanguageMod: 2
   Metrica:
-    enable: 0
+    enable: 1
     metricaCounterID: 0
     log: 1
     useYandexMetrica: 1
@@ -369,7 +369,7 @@ MonoBehaviour:
     methodName: NameYourMethod
   RewardedAdv:
     rewardedAfterClosing: 1
-    skipInterAdvAfterReward: 0
+    skipInterAdvAfterReward: 1
     labelAdvSimLabel: 0
   ServerTime:
     serverTime: 1721201231000
@@ -427,22 +427,22 @@ MonoBehaviour:
   platformInfo:
     ownHost: 0
   platformToggles:
-    showFirstAdv: 0
-    interAdvInterval: 0
-    postponeCallByFail: 0
-    useYandexMetrica: 0
-    metricaCounterID: 0
-    skipInterAdvAfterReward: 0
-    saveLocal: 0
-    saveCloud: 0
+    showFirstAdv: 1
+    interAdvInterval: 1
+    postponeCallByFail: 1
+    useYandexMetrica: 1
+    metricaCounterID: 1
+    skipInterAdvAfterReward: 1
+    saveLocal: 1
+    saveCloud: 1
     selectWebGLTemplate: 1
-    runInBackground: 1
+    runInBackground: 0
     enableExceptions: 1
     compressionFormat: 1
     decompressionFallback: 1
     autoGraphicsAPI: 1
     minimalCodeCompression: 1
-    dataCaching: 0
-    colorSpace: 0
-    archivingBuild: 0
+    dataCaching: 1
+    colorSpace: 1
+    archivingBuild: 1
     syncInitSDK: 0
