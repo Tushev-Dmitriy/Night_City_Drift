@@ -5,6 +5,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using YG;
+using static YG.YG2;
 
 public class EventManager : MonoBehaviour
 {
@@ -31,6 +33,7 @@ public class EventManager : MonoBehaviour
     [Header("UI objects")]
     [SerializeField] GameObject startCanvas;
     [SerializeField] GameObject inGameCanvas;
+    [SerializeField] GameObject mobileControllers;
 
     [Header("Garage UI")]
     [SerializeField] TMP_Text moneyCountText;
@@ -40,9 +43,12 @@ public class EventManager : MonoBehaviour
     public TMP_Text CheckDriftText() => driftText;
     public List<MainCarData> GetCarsData() => _carsData;
     public MainCarData GetCurrentCar() => currentCarData;
+    public GameObject GetMobileControllers() => mobileControllers;
+    public bool IsMobile() => isMobile;
 
     private MainCarData currentCarData;
     private int currentCarIndex = 0;
+    private bool isMobile = false;
 
     private void Awake()
     {
@@ -51,6 +57,13 @@ public class EventManager : MonoBehaviour
 
     private void Start()
     {
+        Device deviceType = YG2.envir.device;
+
+        if (deviceType == YG2.Device.Mobile)
+        {
+            isMobile = true;
+        }
+
         if (_carsData != null && _carsData.Count > 0)
         {
             currentCarIndex = 0;

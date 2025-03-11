@@ -12,9 +12,12 @@ public class UI_Controller : MonoBehaviour
 
     EventManager _eventManager;
 
+    private GameObject mobileControllers;
+
     private void Start()
     {
         _eventManager = FindObjectOfType<EventManager>();
+        mobileControllers = _eventManager.GetMobileControllers();
 
         SetCurrentCar();
 
@@ -38,6 +41,17 @@ public class UI_Controller : MonoBehaviour
     public void SetCarController(PrometeoCarController newCarController)
     {
         carController = newCarController;
+
+        if (_eventManager.IsMobile())
+        {
+            carController.useTouchControls = true;
+            carController.throttleButton = mobileControllers.transform.GetChild(0).gameObject;
+            carController.reverseButton = mobileControllers.transform.GetChild(1).gameObject;
+            carController.handbrakeButton = mobileControllers.transform.GetChild(2).gameObject;
+            carController.turnLeftButton = mobileControllers.transform.GetChild(3).gameObject;
+            carController.turnRightButton = mobileControllers.transform.GetChild(4).gameObject;
+            mobileControllers.SetActive(true);
+        }
     }
 
     public void SetDriftController(DriftController newDriftController)

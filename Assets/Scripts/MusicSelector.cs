@@ -5,16 +5,10 @@ using UnityEngine.Audio;
 
 public class MusicSelector : MonoBehaviour
 {
+    [SerializeField] private TMP_Dropdown musicDropdown;
     [SerializeField] private AudioSource musicSource;
-    [SerializeField] private Dropdown musicDropdown;
-    [SerializeField] private AudioMixerGroup musicGroup;
     [SerializeField] private string[] trackNames;
     [SerializeField] private AudioClip[] audioClips;
-
-    private void Awake()
-    {
-        musicSource.outputAudioMixerGroup = musicGroup;
-    }
 
     private void Start()
     {
