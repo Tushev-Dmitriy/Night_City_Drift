@@ -1,0 +1,43 @@
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.Audio;
+
+public class MusicSelector : MonoBehaviour
+{
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private Dropdown musicDropdown;
+    [SerializeField] private AudioMixerGroup musicGroup;
+    [SerializeField] private string[] trackNames;
+    [SerializeField] private AudioClip[] audioClips;
+
+    private void Awake()
+    {
+        musicSource.outputAudioMixerGroup = musicGroup;
+    }
+
+    private void Start()
+    {
+        musicDropdown.ClearOptions();
+        musicDropdown.AddOptions(new System.Collections.Generic.List<string>(trackNames));
+        int selectedTrackIndex = 0;
+        musicDropdown.value = selectedTrackIndex;
+        LoadTrack(selectedTrackIndex);
+        musicDropdown.onValueChanged.AddListener(OnTrackChanged);
+    }
+
+    public void OnTrackChanged(int index)
+    {
+        LoadTrack(index);
+    }
+
+    private void LoadTrack(int index)
+    {
+        if (index < 0 || index >= audioClips.Length) return;
+
+        musicSource.clip = audioClips[index];
+        musicSource.Play();
+
+        Debug.Log($"Track: {trackNames[index]}");
+    }
+}
