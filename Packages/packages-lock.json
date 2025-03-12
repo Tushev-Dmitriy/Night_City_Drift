@@ -265,7 +265,7 @@
       "url": "https://packages.unity.com"
     },
     "org.khronos.unitygltf": {
-      "version": "2.14.1",
+      "version": "2.15.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
