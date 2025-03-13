@@ -27,7 +27,7 @@ public class SaveManager : MonoBehaviour
 
         LoadLocalData();
         LoadLocalUserData();
-        //LoadAllData();
+        LoadAllDataYG();
     }
 
     public void SaveData(string carName)
@@ -45,14 +45,13 @@ public class SaveManager : MonoBehaviour
                 haveNitro = carToSave.carCharacteristics.haveNitro,
                 haveTurbine = carToSave.carCharacteristics.haveTurbine,
                 carPlate = carToSave.carView.carPlate,
-                carBodyColorR = carToSave.carView.carColor.GetColor("Color").r, // Красный
-                carBodyColorG = carToSave.carView.carColor.GetColor("Color").g, // Зелёный
-                carBodyColorB = carToSave.carView.carColor.GetColor("Color").b, // Синий
-                carWheelColorR = carToSave.carView.wheelColor.GetColor("Color").r, // Красный
-                carWheelColorG = carToSave.carView.wheelColor.GetColor("Color").g, // Зелёный
-                carWheelColorB = carToSave.carView.wheelColor.GetColor("Color").b  // Синий
+                carBodyColorR = carToSave.carView.carColor.GetColor("_BaseColor").r,
+                carBodyColorG = carToSave.carView.carColor.GetColor("_BaseColor").g,
+                carBodyColorB = carToSave.carView.carColor.GetColor("_BaseColor").b,
+                carWheelColorR = carToSave.carView.wheelColor.GetColor("_BaseColor").r,
+                carWheelColorG = carToSave.carView.wheelColor.GetColor("_BaseColor").g,
+                carWheelColorB = carToSave.carView.wheelColor.GetColor("_BaseColor").b
             };
-            Debug.Log($"Saving colors for {carName}: Body=(R:{saveData.carBodyColorR}, G:{saveData.carBodyColorG}, B:{saveData.carBodyColorB}), Wheels=(R:{saveData.carWheelColorR}, G:{saveData.carWheelColorG}, B:{saveData.carWheelColorB})");
             string json = JsonUtility.ToJson(saveData);
             SaveToLocal(carToSave.carName, json);
         }
@@ -90,9 +89,8 @@ public class SaveManager : MonoBehaviour
         car.carCharacteristics.haveNitro = saveData.haveNitro;
         car.carCharacteristics.haveTurbine = saveData.haveTurbine;
         car.carView.carPlate = saveData.carPlate;
-        car.carView.carColor.SetColor("Color", new Color(saveData.carBodyColorR, saveData.carBodyColorG, saveData.carBodyColorB, 1f)); // Применяем цвет кузова
-        car.carView.wheelColor.SetColor("Color", new Color(saveData.carWheelColorR, saveData.carWheelColorG, saveData.carWheelColorB, 1f)); // Применяем цвет колёс
-        Debug.Log($"Applied colors for {car.carName}: Body=(R:{car.carView.carColor.GetColor("Color").r}, G:{saveData.carBodyColorG}, B:{saveData.carBodyColorB}), Wheels=(R:{saveData.carWheelColorR}, G:{saveData.carWheelColorG}, B:{saveData.carWheelColorB})");
+        car.carView.carColor.color = new Color(saveData.carBodyColorR, saveData.carBodyColorG, saveData.carBodyColorB, 1f);
+        car.carView.wheelColor.color = new Color(saveData.carWheelColorR, saveData.carWheelColorG, saveData.carWheelColorB, 1f);
     }
 
     public void SaveUserData()
@@ -102,6 +100,7 @@ public class SaveManager : MonoBehaviour
             string json = JsonConvert.SerializeObject(userData);
             PlayerPrefs.SetString(localUserDataKey, json);
             PlayerPrefs.Save();
+            SaveUserDataYG();
             Debug.Log("UserData сохранены локально");
         }
     }
@@ -116,6 +115,7 @@ public class SaveManager : MonoBehaviour
             userData.carVolume = userDataSave.carVolume;
             userData.musicVolume = userDataSave.musicVolume;
             userData.userCarsName = userDataSave.userCarsName;
+            userData.maxScore = userDataSave.maxScore;
             Debug.Log("UserData загружены локально");
         }
     }
@@ -125,6 +125,8 @@ public class SaveManager : MonoBehaviour
         userData.moneyCount = YG2.saves.moneyCount;
         userData.carVolume = YG2.saves.carVolume;
         userData.musicVolume = YG2.saves.musicVolume;
+        userData.userCarsName = YG2.saves.userCarsName;
+        userData.maxScore = YG2.saves.maxScore;
 
         foreach (var savedCar in YG2.saves.cars)
         {
@@ -138,18 +140,29 @@ public class SaveManager : MonoBehaviour
                 car.carCharacteristics.haveNitro = savedCar.haveNitro;
                 car.carCharacteristics.haveTurbine = savedCar.haveTurbine;
                 car.carView.carPlate = savedCar.carPlate;
-                car.carView.carColor.SetColor("Color", new Color(savedCar.carBodyColorR, savedCar.carBodyColorG, savedCar.carBodyColorB, 1f)); // Применяем цвет кузова
-                car.carView.wheelColor.SetColor("Color", new Color(savedCar.carWheelColorR, savedCar.carWheelColorG, savedCar.carWheelColorB, 1f)); // Применяем цвет колёс
-                Debug.Log($"Loaded colors from YG2 for {car.carName}: Body=(R:{savedCar.carBodyColorR}, G:{savedCar.carBodyColorG}, B:{savedCar.carBodyColorB}), Wheels=(R:{savedCar.carWheelColorR}, G:{savedCar.carWheelColorG}, B:{savedCar.carWheelColorB})");
+                car.carView.carColor.color = new Color(savedCar.carBodyColorR, savedCar.carBodyColorG, savedCar.carBodyColorB, 1f);
+                car.carView.wheelColor.color = new Color(savedCar.carWheelColorR, savedCar.carWheelColorG, savedCar.carWheelColorB, 1f);
             }
         }
     }
 
-    public void SaveAllDataYG()
+    public void SaveUserDataYG()
     {
         YG2.saves.moneyCount = userData.moneyCount;
         YG2.saves.carVolume = userData.carVolume;
         YG2.saves.musicVolume = userData.musicVolume;
+        YG2.saves.userCarsName = userData.userCarsName;
+        YG2.saves.maxScore = userData.maxScore;
+        YG2.SaveProgress();
+    }
+
+    public void SaveCarsDataYG()
+    {
+        StartCoroutine(SaveCarsDataYGCor());
+    }
+    private IEnumerator SaveCarsDataYGCor()
+    {
+        yield return new WaitForSeconds(0.2f);
 
         YG2.saves.cars.Clear();
         foreach (var car in saveableCars)
@@ -164,16 +177,20 @@ public class SaveManager : MonoBehaviour
                 haveNitro = car.carCharacteristics.haveNitro,
                 haveTurbine = car.carCharacteristics.haveTurbine,
                 carPlate = car.carView.carPlate,
-                carBodyColorR = car.carView.carColor.GetColor("Color").r, // Красный
-                carBodyColorG = car.carView.carColor.GetColor("Color").g, // Зелёный
-                carBodyColorB = car.carView.carColor.GetColor("Color").b, // Синий
-                carWheelColorR = car.carView.wheelColor.GetColor("Color").r, // Красный
-                carWheelColorG = car.carView.wheelColor.GetColor("Color").g, // Зелёный
-                carWheelColorB = car.carView.wheelColor.GetColor("Color").b  // Синий
+                carBodyColorR = car.carView.carColor.GetColor("_BaseColor").r,
+                carBodyColorG = car.carView.carColor.GetColor("_BaseColor").g,
+                carBodyColorB = car.carView.carColor.GetColor("_BaseColor").b,
+                carWheelColorR = car.carView.wheelColor.GetColor("_BaseColor").r,
+                carWheelColorG = car.carView.wheelColor.GetColor("_BaseColor").g,
+                carWheelColorB = car.carView.wheelColor.GetColor("_BaseColor").b
             };
             YG2.saves.cars.Add(saveData);
         }
-
         YG2.SaveProgress();
+    }
+
+    public void CheckDriftScore(int score)
+    {
+        userData.SetMaxScore(score);
     }
 }

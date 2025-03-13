@@ -59,6 +59,7 @@ public class DriftController : MonoBehaviour
     {
         if (score > 0)
         {
+            SaveManager.Instance?.CheckDriftScore((int)score);
             addMoneyEvent.Raise(-(int)score);
         }
 

@@ -7,8 +7,8 @@ namespace YG
         public int moneyCount;
         public float carVolume;
         public float musicVolume;
-        public List<MainCarData> userCars = new List<MainCarData>();
-
+        public int maxScore;
         public List<CarSaveData> cars = new List<CarSaveData>();
+        public List<string> userCarsName = new List<string>();
     }
 }

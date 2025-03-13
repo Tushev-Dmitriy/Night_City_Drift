@@ -34,4 +34,9 @@ public class MusicSelector : MonoBehaviour
 
         Debug.Log($"Track: {trackNames[index]}");
     }
+
+    private void OnDisable()
+    {
+        musicSource.Stop();
+    }
 }

@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -5232,7 +5232,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 750, y: 950}
+  m_SizeDelta: {x: 820, y: 950}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &588013605
 MonoBehaviour:
@@ -7278,10 +7278,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: 190
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7520820c43d0c9d41a6b924a06ca1bd2, type: 2}
-  m_sharedMaterial: {fileID: -2759662498525375840, guid: 7520820c43d0c9d41a6b924a06ca1bd2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7300,7 +7300,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 93368250
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -7312,7 +7312,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -7341,7 +7341,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 74.414246, w: -78.182495}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7365,7 +7365,6 @@ GameObject:
   m_Component:
   - component: {fileID: 854812741}
   - component: {fileID: 854812742}
-  - component: {fileID: 854812743}
   m_Layer: 5
   m_Name: MusicWindow
   m_TagString: Untagged
@@ -7415,26 +7414,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &854812743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854812740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01be744c0fdf7834f8d66b9aff6d496b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicDropdown: {fileID: 1572514604}
-  musicSource: {fileID: 1722151994}
-  trackNames:
-  - Lost angeles
-  - Asphalt 8
-  audioClips:
-  - {fileID: 8300000, guid: 8644e3cc44b38164c83e19025f02ed5a, type: 3}
-  - {fileID: 8300000, guid: ad02d2ac35b9b1f488cee2fbb2c48473, type: 3}
 --- !u!1 &862103891
 GameObject:
   m_ObjectHideFlags: 0
@@ -7502,9 +7481,9 @@ RectTransform:
   - {fileID: 848551141}
   m_Father: {fileID: 1812131196}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -65}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -85, y: 85}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &879083430
@@ -12522,6 +12501,7 @@ GameObject:
   - component: {fileID: 1346727920}
   - component: {fileID: 1346727919}
   - component: {fileID: 1346727922}
+  - component: {fileID: 1346727923}
   m_Layer: 5
   m_Name: MusicBtn
   m_TagString: Untagged
@@ -12655,6 +12635,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnMenu: {fileID: 854812740}
+--- !u!114 &1346727923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346727917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01be744c0fdf7834f8d66b9aff6d496b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicDropdown: {fileID: 1572514604}
+  musicSource: {fileID: 1722151994}
+  trackNames:
+  - Lost angeles
+  - Asphalt 8
+  audioClips:
+  - {fileID: 8300000, guid: 8644e3cc44b38164c83e19025f02ed5a, type: 3}
+  - {fileID: 8300000, guid: ad02d2ac35b9b1f488cee2fbb2c48473, type: 3}
 --- !u!1 &1358501462
 GameObject:
   m_ObjectHideFlags: 0
@@ -19020,7 +19020,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 250, y: 33.333}
+  m_CellSize: {x: 700, y: 90}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -21727,7 +21727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -30, y: 0}
   m_SizeDelta: {x: 700, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4914500248795448436
@@ -22295,8 +22295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 423e13a42d313f948a13bcedae13febe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameLB: dirftScore
-  maxQuantityPlayers: 25
+  nameLB: driftScore
+  maxQuantityPlayers: 10
   quantityTop: 3
   quantityAround: 3
   updateLBMethod: 1
@@ -22305,7 +22305,7 @@ MonoBehaviour:
   rootSpawnPlayersData: {fileID: 4194510983497206502}
   playerDataPrefab: {fileID: 1187885703708354702, guid: 9ec53a73380f9f4489d146155923a20a, type: 3}
   playerPhoto: 1
-  isHiddenPlayerPhoto: {fileID: 0}
+  isHiddenPlayerPhoto: {fileID: 21300000, guid: 26662cfab60175c479305f3268ba8146, type: 3}
   timeTypeConvert: 0
   decimalSize: 0
   onUpdateData:

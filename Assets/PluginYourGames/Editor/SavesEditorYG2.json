@@ -13,11 +13,11 @@
         false,
         false
     ],
-    "idSave": 11,
+    "idSave": 181,
     "moneyCount": 194000,
-    "carVolume": -65.80400848388672,
-    "musicVolume": -42.846065521240237,
-    "userCars": [],
+    "carVolume": -50.34716796875,
+    "musicVolume": -33.52649688720703,
+    "maxScore": 470,
     "cars": [
         {
             "carName": "Vaz 2107",
@@ -28,9 +28,9 @@
             "haveNitro": false,
             "haveTurbine": false,
             "carPlate": "А053ВС178",
-            "carBodyColorR": 0.47308826446533205,
-            "carBodyColorG": 0.3907284438610077,
-            "carBodyColorB": 0.48681408166885378,
+            "carBodyColorR": 1.0,
+            "carBodyColorG": 0.2834363877773285,
+            "carBodyColorB": 0.0,
             "carWheelColorR": 0.0,
             "carWheelColorG": 0.0,
             "carWheelColorB": 0.0
@@ -51,5 +51,8 @@
             "carWheelColorG": 0.0,
             "carWheelColorB": 0.0
         }
+    ],
+    "userCarsName": [
+        "Vaz 2107"
     ]
 }

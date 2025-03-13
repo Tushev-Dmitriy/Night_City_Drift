@@ -110,10 +110,8 @@ public class EventManager : MonoBehaviour
         {
             OnPurchaseItem(5000, false);
             Color newColor = newMaterial.GetColor("_Color1");
-            currentCarData.carView.carColor.SetColor("Color", new Color(newColor.r, newColor.g, newColor.b, 1f));
+            currentCarData.carView.carColor.color = new Color(newColor.r, newColor.g, newColor.b, 1f);
             SaveManager.Instance?.SaveData(currentCarData.carName);
-            SaveManager.Instance?.SaveAllDataYG();
-            SaveManager.Instance?.LoadLocalData();
             carPodiumCotroller.SpawnCar(currentCarData);
         }
         else
@@ -127,10 +125,9 @@ public class EventManager : MonoBehaviour
         if (currentCarData != null && _userData.CanBuy(5000))
         {
             OnPurchaseItem(5000, false);
-            Color newColor = newMaterial.GetColor("Color");
-            currentCarData.carView.wheelColor.SetColor("Color", new Color(newColor.r, newColor.g, newColor.b, 1f)); // Применяем цвет колёс
-            SaveManager.Instance?.SaveData(currentCarData.carName); // Сохраняем локально через PlayerPrefs
-            SaveManager.Instance?.SaveAllDataYG(); // Сохраняем в облако через YG2
+            Color newColor = newMaterial.GetColor("_Color1");
+            currentCarData.carView.wheelColor.color = new Color(newColor.r, newColor.g, newColor.b, 1f);
+            SaveManager.Instance?.SaveData(currentCarData.carName);
             carPodiumCotroller.SpawnCar(currentCarData);
         }
         else
