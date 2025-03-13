@@ -44,8 +44,15 @@ public class SaveManager : MonoBehaviour
                 brakeLvl = carToSave.carCharacteristics.brakeLvl,
                 haveNitro = carToSave.carCharacteristics.haveNitro,
                 haveTurbine = carToSave.carCharacteristics.haveTurbine,
-                carPlate = carToSave.carView.carPlate
+                carPlate = carToSave.carView.carPlate,
+                carBodyColorR = carToSave.carView.carColor.GetColor("Color").r, // Красный
+                carBodyColorG = carToSave.carView.carColor.GetColor("Color").g, // Зелёный
+                carBodyColorB = carToSave.carView.carColor.GetColor("Color").b, // Синий
+                carWheelColorR = carToSave.carView.wheelColor.GetColor("Color").r, // Красный
+                carWheelColorG = carToSave.carView.wheelColor.GetColor("Color").g, // Зелёный
+                carWheelColorB = carToSave.carView.wheelColor.GetColor("Color").b  // Синий
             };
+            Debug.Log($"Saving colors for {carName}: Body=(R:{saveData.carBodyColorR}, G:{saveData.carBodyColorG}, B:{saveData.carBodyColorB}), Wheels=(R:{saveData.carWheelColorR}, G:{saveData.carWheelColorG}, B:{saveData.carWheelColorB})");
             string json = JsonUtility.ToJson(saveData);
             SaveToLocal(carToSave.carName, json);
         }
@@ -58,7 +65,7 @@ public class SaveManager : MonoBehaviour
         Debug.Log($"Данные сохранены локально для {carName}");
     }
 
-    private void LoadLocalData()
+    public void LoadLocalData()
     {
         foreach (var car in saveableCars)
         {
@@ -83,6 +90,9 @@ public class SaveManager : MonoBehaviour
         car.carCharacteristics.haveNitro = saveData.haveNitro;
         car.carCharacteristics.haveTurbine = saveData.haveTurbine;
         car.carView.carPlate = saveData.carPlate;
+        car.carView.carColor.SetColor("Color", new Color(saveData.carBodyColorR, saveData.carBodyColorG, saveData.carBodyColorB, 1f)); // Применяем цвет кузова
+        car.carView.wheelColor.SetColor("Color", new Color(saveData.carWheelColorR, saveData.carWheelColorG, saveData.carWheelColorB, 1f)); // Применяем цвет колёс
+        Debug.Log($"Applied colors for {car.carName}: Body=(R:{car.carView.carColor.GetColor("Color").r}, G:{saveData.carBodyColorG}, B:{saveData.carBodyColorB}), Wheels=(R:{saveData.carWheelColorR}, G:{saveData.carWheelColorG}, B:{saveData.carWheelColorB})");
     }
 
     public void SaveUserData()
@@ -128,6 +138,9 @@ public class SaveManager : MonoBehaviour
                 car.carCharacteristics.haveNitro = savedCar.haveNitro;
                 car.carCharacteristics.haveTurbine = savedCar.haveTurbine;
                 car.carView.carPlate = savedCar.carPlate;
+                car.carView.carColor.SetColor("Color", new Color(savedCar.carBodyColorR, savedCar.carBodyColorG, savedCar.carBodyColorB, 1f)); // Применяем цвет кузова
+                car.carView.wheelColor.SetColor("Color", new Color(savedCar.carWheelColorR, savedCar.carWheelColorG, savedCar.carWheelColorB, 1f)); // Применяем цвет колёс
+                Debug.Log($"Loaded colors from YG2 for {car.carName}: Body=(R:{savedCar.carBodyColorR}, G:{savedCar.carBodyColorG}, B:{savedCar.carBodyColorB}), Wheels=(R:{savedCar.carWheelColorR}, G:{savedCar.carWheelColorG}, B:{savedCar.carWheelColorB})");
             }
         }
     }
@@ -150,7 +163,13 @@ public class SaveManager : MonoBehaviour
                 brakeLvl = car.carCharacteristics.brakeLvl,
                 haveNitro = car.carCharacteristics.haveNitro,
                 haveTurbine = car.carCharacteristics.haveTurbine,
-                carPlate = car.carView.carPlate
+                carPlate = car.carView.carPlate,
+                carBodyColorR = car.carView.carColor.GetColor("Color").r, // Красный
+                carBodyColorG = car.carView.carColor.GetColor("Color").g, // Зелёный
+                carBodyColorB = car.carView.carColor.GetColor("Color").b, // Синий
+                carWheelColorR = car.carView.wheelColor.GetColor("Color").r, // Красный
+                carWheelColorG = car.carView.wheelColor.GetColor("Color").g, // Зелёный
+                carWheelColorB = car.carView.wheelColor.GetColor("Color").b  // Синий
             };
             YG2.saves.cars.Add(saveData);
         }

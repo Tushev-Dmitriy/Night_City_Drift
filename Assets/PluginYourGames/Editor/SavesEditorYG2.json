@@ -1,0 +1,55 @@
+{
+    "stringKeys": [],
+    "stringValues": [],
+    "floatKeys": [],
+    "floatValues": [],
+    "intKeys": [],
+    "intValues": [],
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 11,
+    "moneyCount": 194000,
+    "carVolume": -65.80400848388672,
+    "musicVolume": -42.846065521240237,
+    "userCars": [],
+    "cars": [
+        {
+            "carName": "Vaz 2107",
+            "maxSpeed": 140,
+            "engineLvl": 5,
+            "steeringAngleLvl": 25,
+            "brakeLvl": 300,
+            "haveNitro": false,
+            "haveTurbine": false,
+            "carPlate": "А053ВС178",
+            "carBodyColorR": 0.47308826446533205,
+            "carBodyColorG": 0.3907284438610077,
+            "carBodyColorB": 0.48681408166885378,
+            "carWheelColorR": 0.0,
+            "carWheelColorG": 0.0,
+            "carWheelColorB": 0.0
+        },
+        {
+            "carName": "BMW M3 E30",
+            "maxSpeed": 170,
+            "engineLvl": 8,
+            "steeringAngleLvl": 30,
+            "brakeLvl": 500,
+            "haveNitro": true,
+            "haveTurbine": false,
+            "carPlate": "А053ВС178",
+            "carBodyColorR": 0.0,
+            "carBodyColorG": 0.0,
+            "carBodyColorB": 0.0,
+            "carWheelColorR": 0.0,
+            "carWheelColorG": 0.0,
+            "carWheelColorB": 0.0
+        }
+    ]
+}

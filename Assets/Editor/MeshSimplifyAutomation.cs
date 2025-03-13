@@ -50,6 +50,18 @@ public class MeshSimplifyAutomation : EditorWindow
         MeshFilter[] meshFilters = prefabRoot.GetComponentsInChildren<MeshFilter>();
         SkinnedMeshRenderer[] skinnedRenderers = prefabRoot.GetComponentsInChildren<SkinnedMeshRenderer>();
 
+        // Подсчитываем общее количество вершин до упрощения
+        int totalVerticesBefore = 0;
+        foreach (MeshFilter mf in meshFilters)
+        {
+            if (mf.sharedMesh != null) totalVerticesBefore += mf.sharedMesh.vertexCount;
+        }
+        foreach (SkinnedMeshRenderer smr in skinnedRenderers)
+        {
+            if (smr.sharedMesh != null) totalVerticesBefore += smr.sharedMesh.vertexCount;
+        }
+        Debug.Log($"Total vertices before simplification: {totalVerticesBefore}");
+
         // Обрабатываем все MeshFilter
         foreach (MeshFilter meshFilter in meshFilters)
         {
@@ -65,7 +77,13 @@ public class MeshSimplifyAutomation : EditorWindow
             meshSimplify.m_bGenerateIncludeChildren = true;
             meshSimplify.m_bEnablePrefabUsage = true;
             meshSimplify.m_fVertexAmount = 0.5f; // Уменьшаем до 50%
-            meshSimplify.ConfigureSimplifier(); // Применяем настройки упрощения
+            meshSimplify.ConfigureSimplifier();
+
+            // Отключаем ограничения на упрощение
+            meshSimplify.m_meshSimplifier.UseEdgeLength = true;
+            meshSimplify.m_meshSimplifier.UseCurvature = false;
+            meshSimplify.m_meshSimplifier.ProtectTexture = false;
+            meshSimplify.m_meshSimplifier.LockBorder = false;
 
             // Логируем исходное количество вершин и треугольников
             Mesh originalMesh = meshFilter.sharedMesh;
@@ -79,7 +97,7 @@ public class MeshSimplifyAutomation : EditorWindow
                 continue;
             }
 
-            // Вычисляем упрощённый меш с явным указанием количества вершин
+            // Вычисляем упрощённый меш
             Debug.Log($"Computing simplified mesh for {obj.name}...");
             int targetVertexCount = Mathf.Max(4, Mathf.RoundToInt(originalMesh.vertexCount * 0.5f)); // Минимум 4 вершины
             meshSimplify.m_meshSimplifier.ComputeMeshWithVertexCount(obj, meshSimplify.m_simplifiedMesh, targetVertexCount, $"{obj.name} Simplified");
@@ -124,7 +142,13 @@ public class MeshSimplifyAutomation : EditorWindow
             meshSimplify.m_bGenerateIncludeChildren = true;
             meshSimplify.m_bEnablePrefabUsage = true;
             meshSimplify.m_fVertexAmount = 0.5f;
-            meshSimplify.ConfigureSimplifier(); // Применяем настройки упрощения
+            meshSimplify.ConfigureSimplifier();
+
+            // Отключаем ограничения на упрощение
+            meshSimplify.m_meshSimplifier.UseEdgeLength = true;
+            meshSimplify.m_meshSimplifier.UseCurvature = false;
+            meshSimplify.m_meshSimplifier.ProtectTexture = false;
+            meshSimplify.m_meshSimplifier.LockBorder = false;
 
             // Логируем исходное количество вершин и треугольников
             Mesh originalMesh = skinnedRenderer.sharedMesh;
@@ -138,7 +162,7 @@ public class MeshSimplifyAutomation : EditorWindow
                 continue;
             }
 
-            // Вычисляем упрощённый меш с явным указанием количества вершин
+            // Вычисляем упрощённый меш
             Debug.Log($"Computing simplified mesh for {obj.name}...");
             int targetVertexCount = Mathf.Max(4, Mathf.RoundToInt(originalMesh.vertexCount * 0.5f)); // Минимум 4 вершины
             meshSimplify.m_meshSimplifier.ComputeMeshWithVertexCount(obj, meshSimplify.m_simplifiedMesh, targetVertexCount, $"{obj.name} Simplified");
@@ -167,6 +191,18 @@ public class MeshSimplifyAutomation : EditorWindow
                 Debug.LogWarning($"No simplified mesh generated for {obj.name}. Skipping...");
             }
         }
+
+        // Подсчитываем общее количество вершин после упрощения
+        int totalVerticesAfter = 0;
+        foreach (MeshFilter mf in meshFilters)
+        {
+            if (mf.sharedMesh != null) totalVerticesAfter += mf.sharedMesh.vertexCount;
+        }
+        foreach (SkinnedMeshRenderer smr in skinnedRenderers)
+        {
+            if (smr.sharedMesh != null) totalVerticesAfter += smr.sharedMesh.vertexCount;
+        }
+        Debug.Log($"Total vertices after simplification: {totalVerticesAfter}");
 
         // Сохраняем изменения в префаб
         PrefabUtility.SaveAsPrefabAsset(prefabRoot, prefabPath);
