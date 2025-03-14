@@ -15,7 +15,7 @@ MonoBehaviour:
   carObject: {fileID: 7873279687195750849, guid: 8c7ed83929a143e4d9de23abac139d6d, type: 3}
   carPodiumObject: {fileID: 7873279687195750849, guid: 9c6292df21f5c764b9b74d23ff111112, type: 3}
   carName: Vaz 2107
-  carPrice: 100
+  carPrice: 0
   cameraOffset: {x: 0, y: 2, z: 3}
   carCharacteristics:
     maxSpeed: 190

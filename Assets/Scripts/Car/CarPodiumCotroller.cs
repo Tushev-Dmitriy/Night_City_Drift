@@ -7,6 +7,8 @@ public class CarPodiumCotroller : MonoBehaviour
     [SerializeField] EventManager eventManager;
     [SerializeField] GameObject carModelPos;
 
+    private GameObject currentCarModel;
+
     private void Update()
     {
         if (gameObject.activeSelf)
@@ -27,6 +29,6 @@ public class CarPodiumCotroller : MonoBehaviour
             Destroy(carModelPos.transform.GetChild(0).gameObject);
         }
 
-        GameObject newCarOnPodium = Instantiate(carData.carPodiumObject, carModelPos.transform);
+        Instantiate(carData.carPodiumObject, carModelPos.transform);
     }
 }
