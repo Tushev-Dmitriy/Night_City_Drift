@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201b0f4a4cb62b64085fbf93483da360, type: 3}
+  m_Name: Toyota Supra
+  m_EditorClassIdentifier: 
+  carObject: {fileID: 100914976448185422, guid: 2849b08fe90ff704f8e3009ada042732, type: 3}
+  carPodiumObject: {fileID: 100914976448185422, guid: abb82d6ae444d274caddf64d11417a90, type: 3}
+  carName: Toyota Supra
+  carPrice: 110000
+  cameraOffset: {x: 0, y: 2, z: 3}
+  carCharacteristics:
+    maxSpeed: 170
+    engineLvl: 8
+    steeringAngleLvl: 45
+    brakeLvl: 400
+    haveNitro: 0
+    haveTurbine: 0
+  carView:
+    carPlate: "\u041E056\u0420\u0412156"
+    carColor: {fileID: 2100000, guid: b479d5673d5e9fa4eb75279e7ef271c1, type: 2}
+    bodyType: 1
+    wheelColor: {fileID: 2100000, guid: a9d9afe05bb40c3479b3bdb638b57947, type: 2}

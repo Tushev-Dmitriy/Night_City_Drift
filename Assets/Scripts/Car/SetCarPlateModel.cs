@@ -1,54 +1,49 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SetCarPlateModel : MonoBehaviour
 {
-    [SerializeField] GameObject rearPlate;
-    [SerializeField] GameObject backPlate;
+    [SerializeField] private GameObject rearPlate;
+    [SerializeField] private GameObject backPlate;
 
-    private List<char> correctLetters = new List<char> { 'À', 'Â', 'Å', 'Ê', 'Ì', 'Í', 'Î', 'Ð', 'Ñ', 'Ò', 'Ó', 'Õ' };
-    private List<char> correctNumbers = new List<char> { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+    private readonly List<char> correctLetters = new List<char> { 'À', 'Â', 'Å', 'Ê', 'Ì', 'Í', 'Î', 'Ð', 'Ñ', 'Ò', 'Ó', 'Õ' };
+    private readonly List<char> correctNumbers = new List<char> { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
     public void SetupCarPlate(string text)
     {
         char[] carPlateText = text.ToCharArray();
+
         for (int i = 0; i < carPlateText.Length; i++)
         {
-            if (i == 0 || i == 4 || i == 5)
+            bool isLetter = (i == 0 || i == 4 || i == 5);
+            int index = isLetter ? correctLetters.IndexOf(carPlateText[i]) : correctNumbers.IndexOf(carPlateText[i]);
+
+            if (i == 6 && carPlateText[i] == '0')
             {
-                Transform tempPos = rearPlate.transform.GetChild(i + 1);
-                for (int j = 0; j < tempPos.childCount; j++)
-                {
-                    tempPos.GetChild(j).gameObject.SetActive(false);
-                }
-
-                tempPos.GetChild(correctLetters.IndexOf(carPlateText[i])).gameObject.SetActive(true);
-
-                Transform tempPos1 = backPlate.transform.GetChild(i + 1);
-                for (int j = 0; j < tempPos.childCount; j++)
-                {
-                    tempPos1.GetChild(j).gameObject.SetActive(false);
-                }
-
-                tempPos1.GetChild(correctLetters.IndexOf(carPlateText[i])).gameObject.SetActive(true);
-            } else if ((i >= 1 && i <= 3) || (i >= 6 && i <= 8)) 
-            {
-                Transform tempPos = rearPlate.transform.GetChild(i + 1);
-                for (int j = 0; j < tempPos.childCount; j++)
-                {
-                    tempPos.GetChild(j).gameObject.SetActive(false);
-                }
-
-                tempPos.GetChild(correctLetters.IndexOf(carPlateText[i])).gameObject.SetActive(true);
-
-                Transform tempPos1 = backPlate.transform.GetChild(i + 1);
-                for (int j = 0; j < tempPos.childCount; j++)
-                {
-                    tempPos1.GetChild(j).gameObject.SetActive(false);
-                }
-
-                tempPos1.GetChild(correctLetters.IndexOf(carPlateText[i])).gameObject.SetActive(true);
+                DisableAllChildren(rearPlate.transform.GetChild(i + 1));
+                DisableAllChildren(backPlate.transform.GetChild(i + 1));
             }
+            else
+            {
+                SetPlateCharacter(rearPlate.transform.GetChild(i + 1), index);
+                SetPlateCharacter(backPlate.transform.GetChild(i + 1), index);
+            }
+        }
+    }
+
+    private void SetPlateCharacter(Transform plateTransform, int activeIndex)
+    {
+        for (int j = 0; j < plateTransform.childCount; j++)
+        {
+            plateTransform.GetChild(j).gameObject.SetActive(j == activeIndex);
+        }
+    }
+
+    private void DisableAllChildren(Transform plateTransform)
+    {
+        for (int j = 0; j < plateTransform.childCount; j++)
+        {
+            plateTransform.GetChild(j).gameObject.SetActive(false);
         }
     }
 }

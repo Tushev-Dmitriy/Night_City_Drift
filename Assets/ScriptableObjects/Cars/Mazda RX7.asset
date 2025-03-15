@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201b0f4a4cb62b64085fbf93483da360, type: 3}
+  m_Name: Mazda RX7
+  m_EditorClassIdentifier: 
+  carObject: {fileID: 2840035543744628012, guid: b64538d40778a174ab372da01344d23a, type: 3}
+  carPodiumObject: {fileID: 2840035543744628012, guid: 29ed3ca79f1aa914a8404f1b401c1b86, type: 3}
+  carName: Mazda RX7
+  carPrice: 45000
+  cameraOffset: {x: 0, y: 2, z: 2.5}
+  carCharacteristics:
+    maxSpeed: 150
+    engineLvl: 6
+    steeringAngleLvl: 40
+    brakeLvl: 300
+    haveNitro: 0
+    haveTurbine: 0
+  carView:
+    carPlate: "\u0410761\u041A\u0415702"
+    carColor: {fileID: 2100000, guid: b42a79dc424e3de489f6b87a8c379dcb, type: 2}
+    bodyType: 1
+    wheelColor: {fileID: 2100000, guid: a6786ddf6e8c9f44abe7dd1a3c0ecf55, type: 2}

@@ -38,7 +38,10 @@ public class CarController : MonoBehaviour
         tempCarController.accelerationMultiplier = carData.carCharacteristics.engineLvl;
         tempCarController.maxSteeringAngle = carData.carCharacteristics.steeringAngleLvl;
         tempCarController.brakeForce = carData.carCharacteristics.brakeLvl;
-        
+
+        SetCarPlateModel tempCarPlateModel = tempCar.GetComponentInChildren<SetCarPlateModel>();
+        tempCarPlateModel.SetupCarPlate(carData.carView.carPlate);
+
         if (carData.carCharacteristics.haveTurbine)
         {
             tempCarController.accelerationMultiplier += 2;

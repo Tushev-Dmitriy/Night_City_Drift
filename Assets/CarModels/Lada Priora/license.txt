@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lada Priora Wengallbi
+* source:	https://sketchfab.com/3d-models/lada-priora-wengallbi-949784c085a14a92980b921aaaf43ae2
+* author:	abduhamid_coder (https://sketchfab.com/abduhamid_coder_troll)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lada Priora Wengallbi" (https://sketchfab.com/3d-models/lada-priora-wengallbi-949784c085a14a92980b921aaaf43ae2) by abduhamid_coder (https://sketchfab.com/abduhamid_coder_troll) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

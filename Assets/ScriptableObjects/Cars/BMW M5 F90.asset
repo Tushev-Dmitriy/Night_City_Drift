@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201b0f4a4cb62b64085fbf93483da360, type: 3}
+  m_Name: BMW M5 F90
+  m_EditorClassIdentifier: 
+  carObject: {fileID: 3394948256964721366, guid: 4451af218fab6fe4daf8885be4100e45, type: 3}
+  carPodiumObject: {fileID: 3394948256964721366, guid: 1d0c376580d579444a6c59cdd04a2150, type: 3}
+  carName: BMW M5 F90
+  carPrice: 250000
+  cameraOffset: {x: 0, y: 2, z: 3.7}
+  carCharacteristics:
+    maxSpeed: 190
+    engineLvl: 10
+    steeringAngleLvl: 40
+    brakeLvl: 600
+    haveNitro: 0
+    haveTurbine: 0
+  carView:
+    carPlate: "\u0420089\u0423\u041A567"
+    carColor: {fileID: 2100000, guid: 6306b97a13138bd46bf2aef29db9907b, type: 2}
+    bodyType: 1
+    wheelColor: {fileID: 2100000, guid: 2f64e3fd16b52ef4bb5d5257674d92c0, type: 2}

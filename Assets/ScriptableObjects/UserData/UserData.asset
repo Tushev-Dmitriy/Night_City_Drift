@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81380a1e5ce3d804894f6f648fe0f075, type: 3}
   m_Name: UserData
   m_EditorClassIdentifier: 
-  moneyCount: 244120
-  carVolume: -65.80401
-  musicVolume: -42.846066
+  moneyCount: 12264000
+  carVolume: -50.347168
+  musicVolume: -33.526497
+  maxScore: 470
   userCarsName:
   - Vaz 2107
   - BMW M3 E30
+  - Audi R8

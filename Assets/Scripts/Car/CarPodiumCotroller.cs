@@ -29,6 +29,8 @@ public class CarPodiumCotroller : MonoBehaviour
             Destroy(carModelPos.transform.GetChild(0).gameObject);
         }
 
-        Instantiate(carData.carPodiumObject, carModelPos.transform);
+        currentCarModel = Instantiate(carData.carPodiumObject, carModelPos.transform);
+        SetCarPlateModel tempCarPlateModel = currentCarModel.GetComponentInChildren<SetCarPlateModel>();
+        tempCarPlateModel.SetupCarPlate(eventManager.GetCurrentCar().carView.carPlate);
     }
 }

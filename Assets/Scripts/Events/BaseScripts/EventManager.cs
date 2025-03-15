@@ -161,6 +161,7 @@ public class EventManager : MonoBehaviour
             if (_userData.CanBuy(10000))
             {
                 currentCarData.SetCarPlate(text);
+                carPodiumCotroller.SpawnCar(currentCarData);
             }
             else
             {

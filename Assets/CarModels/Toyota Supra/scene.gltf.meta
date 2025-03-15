@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 4dabf8aacc6048f43b9e10e1cf72677e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 1
+  _deduplicateResources: 0
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 0
+  _swapUvs: 0
+  _generateLightmapUVs: 0
+  _importBlendShapeNames: 1
+  _blendShapeFrameWeight:
+    _option: 0
+    _multiplier: 1
+  _importNormals: 0
+  _importTangents: 0
+  _importCamera: 2
+  _importAnimations: 2
+  _mecanimHumanoidFlip: 0
+  _addAnimatorComponent: 0
+  _animationLoopTime: 1
+  _animationLoopPose: 0
+  _importMaterials: 1
+  _enableGpuInstancing: 0
+  _texturesReadWriteEnabled: 1
+  _generateMipMaps: 1
+  _useSceneNameIdentifier: 1
+  _textureCompression: -50
+  _gltfAsset: '<b>Generator: </b>Sketchfab-15.12.0
+
+    <b>Version: </b>2.0
+
+    
+
+    <b>Extras:
+    </b>
+
+    "author": "Pooya_dh (https://sketchfab.com/Pooya_dh)"
+
+    "license":
+    "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)"
+
+    "source":
+    "https://sketchfab.com/3d-models/toyota-supra-mk4-supra-1997-free-download-18e530a1f4e04b4bbc5f51a09e2f95e2"
+
+    "title":
+    "Toyota Supra MK4 | supra 1997 | Free Download"
+
+'
+  optimizeGameObjects: 0
+  materials:
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  textures:
+  - {fileID: 2800000, guid: c72036d1955714a43b84767033bfb98d, type: 3}
+  - {fileID: 2800000, guid: 7d5a852ff54635f458f45d6b26a46e7b, type: 3}
+  - {fileID: 2800000, guid: e5fc6948804c0b740914424c7cf93556, type: 3}
+  - {fileID: 2800000, guid: 174c4f305e952d04082a18ff17018da7, type: 3}
+  - {fileID: 2800000, guid: 4bc3f8298cbb45a44aa8e2440368f055, type: 3}
+  - {fileID: 2800000, guid: 77e3e01d8a21db5489eeeebb89ed84ca, type: 3}
+  - {fileID: 2800000, guid: c02414aba5af33d4c8c25ccadaf6b842, type: 3}
+  - {fileID: 2800000, guid: e64791e3bda149b4280f3f56a7012881, type: 3}
+  - {fileID: 2800000, guid: 864766e5b088e8345ab5ad2414245600, type: 3}
+  - {fileID: 2800000, guid: 683a0863eb73fa943b42e049f3aed484, type: 3}
+  - {fileID: 2800000, guid: 094cfe92c399e1c4982bd409637f9927, type: 3}
+  - {fileID: 2800000, guid: 2856aebfe82b16146a7fb781ecd4daa5, type: 3}
+  - {fileID: 2800000, guid: b1cce1768b49a5748a57c94f872e9691, type: 3}
+  - {fileID: 2800000, guid: 6a42ad3afca2dea43a5d5ea0931b1cd5, type: 3}
+  - {fileID: 2800000, guid: 1cb93c2562002774d8cef062b2e11b66, type: 3}
+  hasSceneData: 1
+  hasAnimationData: 0
+  hasMaterialData: 1
+  hasTextureData: 1
+  animations: []
+  _extensions:
+  - name: KHR_materials_emissive_strength
+    supported: 1
+    used: 1
+    required: 0
+  - name: KHR_materials_specular
+    supported: 1
+    used: 1
+    required: 0
+  - name: KHR_materials_transmission
+    supported: 1
+    used: 1
+    required: 0
+  _textures:
+  - texture: {fileID: 2800000, guid: c72036d1955714a43b84767033bfb98d, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 7d5a852ff54635f458f45d6b26a46e7b, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: e5fc6948804c0b740914424c7cf93556, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  - texture: {fileID: 2800000, guid: 174c4f305e952d04082a18ff17018da7, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 4bc3f8298cbb45a44aa8e2440368f055, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 77e3e01d8a21db5489eeeebb89ed84ca, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: c02414aba5af33d4c8c25ccadaf6b842, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  - texture: {fileID: 2800000, guid: e64791e3bda149b4280f3f56a7012881, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 864766e5b088e8345ab5ad2414245600, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 683a0863eb73fa943b42e049f3aed484, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  - texture: {fileID: 2800000, guid: 094cfe92c399e1c4982bd409637f9927, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 2856aebfe82b16146a7fb781ecd4daa5, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: b1cce1768b49a5748a57c94f872e9691, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 6a42ad3afca2dea43a5d5ea0931b1cd5, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 1cb93c2562002774d8cef062b2e11b66, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  _mainAssetIdentifier: scenes/Sketchfab_Scene
+  _importPlugins: []

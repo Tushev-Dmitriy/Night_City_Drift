@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: 6bb52dcd09110c945b3003c788db9763
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 1
+  _deduplicateResources: 0
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 0
+  _swapUvs: 0
+  _generateLightmapUVs: 0
+  _importBlendShapeNames: 1
+  _blendShapeFrameWeight:
+    _option: 0
+    _multiplier: 1
+  _importNormals: 0
+  _importTangents: 0
+  _importCamera: 2
+  _importAnimations: 2
+  _mecanimHumanoidFlip: 0
+  _addAnimatorComponent: 0
+  _animationLoopTime: 1
+  _animationLoopPose: 0
+  _importMaterials: 1
+  _enableGpuInstancing: 0
+  _texturesReadWriteEnabled: 1
+  _generateMipMaps: 1
+  _useSceneNameIdentifier: 1
+  _textureCompression: -50
+  _gltfAsset: '<b>Generator: </b>Sketchfab-15.12.0
+
+    <b>Version: </b>2.0
+
+    
+
+    <b>Extras:
+    </b>
+
+    "author": "Pooya_dh (https://sketchfab.com/Pooya_dh)"
+
+    "license":
+    "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)"
+
+    "source":
+    "https://sketchfab.com/3d-models/ford-mustang-1965-5f4e3965f79540a9888b5d05acea5943"
+
+    "title":
+    "Ford Mustang 1965"
+
+'
+  optimizeGameObjects: 0
+  materials:
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  - {instanceID: 0}
+  textures:
+  - {fileID: 2800000, guid: 86e88dba5fb811143bb1fc90bc423658, type: 3}
+  - {fileID: 2800000, guid: a3c7fd8efef7fb945a5e868f84816b1c, type: 3}
+  - {fileID: 2800000, guid: af8d554d955e66a4facf3bb010a0ce4b, type: 3}
+  - {fileID: 2800000, guid: 53ea98a197bd7774c929fdcca40c7caa, type: 3}
+  - {fileID: 2800000, guid: d49446f86e1e7414e9a01996455543e4, type: 3}
+  - {fileID: 2800000, guid: 27c9dfb08722e3f45937b47c84eebd73, type: 3}
+  - {fileID: 2800000, guid: 423758fd3eac4d748bd3745361122204, type: 3}
+  - {fileID: 2800000, guid: cbcaefa0f036c684ea93691c596a9be9, type: 3}
+  - {fileID: 2800000, guid: fd10d8df2e5db0049a6392432d95a901, type: 3}
+  - {fileID: 2800000, guid: 86fd31b48b013c94db253ab78806214b, type: 3}
+  - {fileID: 2800000, guid: 8721e33a1bd166f40b4e67b2a45f67a2, type: 3}
+  - {fileID: 2800000, guid: bcb28709ca67d39429caa6131fe152a1, type: 3}
+  - {fileID: 2800000, guid: 671d724db53ae0946be98eebe9a4fa21, type: 3}
+  - {fileID: 2800000, guid: 8f54345d5751c3448805f59aab35263b, type: 3}
+  - {fileID: 2800000, guid: 0e74e89543cef5545a4dcda40223e70e, type: 3}
+  - {fileID: 2800000, guid: 2a25514dec344264f8a1e2d7434159d2, type: 3}
+  - {fileID: 2800000, guid: 50c1f6a898cbe464eb3329e6478ba3ad, type: 3}
+  hasSceneData: 1
+  hasAnimationData: 0
+  hasMaterialData: 1
+  hasTextureData: 1
+  animations: []
+  _extensions:
+  - name: KHR_materials_transmission
+    supported: 1
+    used: 1
+    required: 0
+  - name: KHR_materials_emissive_strength
+    supported: 1
+    used: 1
+    required: 0
+  _textures:
+  - texture: {fileID: 2800000, guid: 86e88dba5fb811143bb1fc90bc423658, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: a3c7fd8efef7fb945a5e868f84816b1c, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: af8d554d955e66a4facf3bb010a0ce4b, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 53ea98a197bd7774c929fdcca40c7caa, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: d49446f86e1e7414e9a01996455543e4, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 27c9dfb08722e3f45937b47c84eebd73, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 423758fd3eac4d748bd3745361122204, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: cbcaefa0f036c684ea93691c596a9be9, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: fd10d8df2e5db0049a6392432d95a901, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 86fd31b48b013c94db253ab78806214b, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 8721e33a1bd166f40b4e67b2a45f67a2, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: bcb28709ca67d39429caa6131fe152a1, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 671d724db53ae0946be98eebe9a4fa21, type: 3}
+    shouldBeLinear: 1
+    shouldBeNormalMap: 1
+  - texture: {fileID: 2800000, guid: 8f54345d5751c3448805f59aab35263b, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 0e74e89543cef5545a4dcda40223e70e, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 2a25514dec344264f8a1e2d7434159d2, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  - texture: {fileID: 2800000, guid: 50c1f6a898cbe464eb3329e6478ba3ad, type: 3}
+    shouldBeLinear: 0
+    shouldBeNormalMap: 0
+  _mainAssetIdentifier: scenes/Sketchfab_Scene
+  _importPlugins: []

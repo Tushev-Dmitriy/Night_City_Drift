@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201b0f4a4cb62b64085fbf93483da360, type: 3}
+  m_Name: Nissan Skyline R34
+  m_EditorClassIdentifier: 
+  carObject: {fileID: 5543942257893177544, guid: 116dbe344602f6c46987bea987aee82c, type: 3}
+  carPodiumObject: {fileID: 5543942257893177544, guid: 8dc1d4396e7b9bb48a66e6a71802fad1, type: 3}
+  carName: Nissan Skyline R34
+  carPrice: 75000
+  cameraOffset: {x: 0, y: 2, z: 4}
+  carCharacteristics:
+    maxSpeed: 170
+    engineLvl: 8
+    steeringAngleLvl: 35
+    brakeLvl: 500
+    haveNitro: 0
+    haveTurbine: 0
+  carView:
+    carPlate: "\u0425726\u0410\u0423052"
+    carColor: {fileID: 2100000, guid: b985d51cd796e7a4fadc2ba87d085c8a, type: 2}
+    bodyType: 2
+    wheelColor: {fileID: 2100000, guid: eeed468aff0c7ef40821aff5e830f862, type: 2}

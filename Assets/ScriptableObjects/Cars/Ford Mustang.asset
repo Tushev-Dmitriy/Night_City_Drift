@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201b0f4a4cb62b64085fbf93483da360, type: 3}
+  m_Name: Ford Mustang
+  m_EditorClassIdentifier: 
+  carObject: {fileID: 5375690938501174045, guid: 9727e6df9a9d00c4b8b2162387b1189f, type: 3}
+  carPodiumObject: {fileID: 5375690938501174045, guid: 80c92c00b07410745a01a22843d2de79, type: 3}
+  carName: Ford Mustang
+  carPrice: 20000
+  cameraOffset: {x: 0, y: 2, z: 4}
+  carCharacteristics:
+    maxSpeed: 160
+    engineLvl: 7
+    steeringAngleLvl: 30
+    brakeLvl: 300
+    haveNitro: 0
+    haveTurbine: 0
+  carView:
+    carPlate: "\u0412982\u0410\u041E781"
+    carColor: {fileID: 2100000, guid: 4a608e67cb6559542a62297d4860d1fc, type: 2}
+    bodyType: 2
+    wheelColor: {fileID: 2100000, guid: 7fed8bb306d45e546b6082e8d167c03b, type: 2}
