@@ -13,11 +13,11 @@
         false,
         false
     ],
-    "idSave": 1011,
-    "moneyCount": 10218481,
-    "carVolume": -50.30289077758789,
-    "musicVolume": -40.11842346191406,
-    "maxScore": 1280,
+    "idSave": 2251,
+    "moneyCount": 223690,
+    "carVolume": -68.58043670654297,
+    "musicVolume": -46.02523422241211,
+    "maxScore": 2290,
     "cars": [
         {
             "carName": "Vaz 2107",
@@ -28,12 +28,12 @@
             "haveNitro": false,
             "haveTurbine": false,
             "carPlate": "В205ХУ143",
-            "carBodyColorR": 1.0,
-            "carBodyColorG": 0.2834363877773285,
+            "carBodyColorR": 0.0,
+            "carBodyColorG": 0.0,
             "carBodyColorB": 0.0,
-            "carWheelColorR": 0.38210976123809817,
-            "carWheelColorG": 0.0,
-            "carWheelColorB": 0.0
+            "carWheelColorR": 1.0,
+            "carWheelColorG": 1.0,
+            "carWheelColorB": 1.0
         },
         {
             "carName": "BMW M3 E30",
@@ -108,11 +108,11 @@
             "haveNitro": false,
             "haveTurbine": false,
             "carPlate": "О056РВ156",
-            "carBodyColorR": 0.0,
-            "carBodyColorG": 0.0,
+            "carBodyColorR": 1.0,
+            "carBodyColorG": 0.29650643467903139,
             "carBodyColorB": 0.0,
-            "carWheelColorR": 1.0,
-            "carWheelColorG": 1.0,
+            "carWheelColorR": 0.051000114530324939,
+            "carWheelColorG": 0.0,
             "carWheelColorB": 1.0
         },
         {
@@ -139,7 +139,7 @@
             "brakeLvl": 600,
             "haveNitro": false,
             "haveTurbine": false,
-            "carPlate": "Р089УК567",
+            "carPlate": "Х999УН777",
             "carBodyColorR": 1.0,
             "carBodyColorG": 0.0,
             "carBodyColorB": 0.0,

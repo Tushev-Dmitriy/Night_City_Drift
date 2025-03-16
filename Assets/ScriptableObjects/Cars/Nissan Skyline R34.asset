@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201b0f4a4cb62b64085fbf93483da360, type: 3}
   m_Name: Nissan Skyline R34
   m_EditorClassIdentifier: 
-  carObject: {fileID: 5543942257893177544, guid: 116dbe344602f6c46987bea987aee82c, type: 3}
+  carObject: {fileID: 8434976551726850750, guid: fb1576e711aa0a049a505f0908856f00, type: 3}
   carPodiumObject: {fileID: 5543942257893177544, guid: 8dc1d4396e7b9bb48a66e6a71802fad1, type: 3}
   carName: Nissan Skyline R34
   carPrice: 75000

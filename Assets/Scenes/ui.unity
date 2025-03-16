@@ -7158,7 +7158,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Option A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7520820c43d0c9d41a6b924a06ca1bd2, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7222,7 +7222,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &836772289
@@ -7353,7 +7353,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 74.414246, w: -78.182495}
+  m_margin: {x: -345.96802, y: 0, z: 74.414246, w: -78.182495}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7472,7 +7472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 868169707}
   m_Layer: 5
-  m_Name: SpeedTextObj
+  m_Name: SpeedObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7495,7 +7495,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -85, y: 85}
+  m_AnchoredPosition: {x: -55, y: 85}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &879083430
@@ -9341,15 +9341,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7520820c43d0c9d41a6b924a06ca1bd2, type: 2}
-  m_sharedMaterial: {fileID: -2759662498525375840, guid: 7520820c43d0c9d41a6b924a06ca1bd2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd2a7bf33ec96e549a10ab3ae1707b7d, type: 2}
+  m_sharedMaterial: {fileID: -5979234917284004053, guid: dd2a7bf33ec96e549a10ab3ae1707b7d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294959104
-  m_fontColor: {r: 0, g: 0.8769696, b: 1, a: 1}
+    rgba: 4278211327
+  m_fontColor: {r: 1, g: 0.3196501, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11328,12 +11328,12 @@ RectTransform:
   - {fileID: 781919330}
   - {fileID: 42890397}
   - {fileID: 1900853161}
-  - {fileID: 1451794397}
   - {fileID: 160624424}
   - {fileID: 510091632}
   - {fileID: 1145217654}
   - {fileID: 1852008542}
   - {fileID: 1063939551}
+  - {fileID: 1451794397}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -12664,9 +12664,25 @@ MonoBehaviour:
   trackNames:
   - Lost angeles
   - Asphalt 8
+  - Fragile Day
+  - Rise of the Dead
+  - Still Will
+  - Turbo (Majestic)
+  - Sigma boy
+  - Po Moskve
+  - Amsterdam
+  - AK-47
   audioClips:
-  - {fileID: 8300000, guid: 8644e3cc44b38164c83e19025f02ed5a, type: 3}
-  - {fileID: 8300000, guid: ad02d2ac35b9b1f488cee2fbb2c48473, type: 3}
+  - {fileID: 8300000, guid: 137af8c3d5028474ea05343489a629de, type: 3}
+  - {fileID: 8300000, guid: 658ffdc7125d61c44b7e09c82965b905, type: 3}
+  - {fileID: 8300000, guid: 76e1c2da082cfdf4f967983ad26ca1e6, type: 3}
+  - {fileID: 8300000, guid: 7a4790e3654d89747885c17b3c9fca35, type: 3}
+  - {fileID: 8300000, guid: 14c71e5eb01b3c3439beeb94d5c9348d, type: 3}
+  - {fileID: 8300000, guid: a8d570f61b5de844595828509015d13f, type: 3}
+  - {fileID: 8300000, guid: 2b5298771f261c341bf2acf56ab4861c, type: 3}
+  - {fileID: 8300000, guid: 515f97f071b9e6d4c9a622a16c5c7162, type: 3}
+  - {fileID: 8300000, guid: f0c7835fc9ab9db4a9ebedf069b97260, type: 3}
+  - {fileID: 8300000, guid: 0565b4cdd3855fa418df0610ef7c7d50, type: 3}
 --- !u!1 &1358501462
 GameObject:
   m_ObjectHideFlags: 0
@@ -15365,7 +15381,6 @@ GameObject:
   - component: {fileID: 1680252747}
   - component: {fileID: 1680252749}
   - component: {fileID: 1680252748}
-  - component: {fileID: 1680252750}
   m_Layer: 5
   m_Name: Bg
   m_TagString: Untagged
@@ -15432,18 +15447,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680252746}
   m_CullTransparentMesh: 1
---- !u!114 &1680252750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1680252746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 436d802fa2a3c0b44ac2798d53382b07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1684355150
 GameObject:
   m_ObjectHideFlags: 0
@@ -21596,7 +21599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -198, y: -102}
+  m_AnchoredPosition: {x: -200, y: -100}
   m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3946850389022350198
@@ -21664,7 +21667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -485, y: -102}
+  m_AnchoredPosition: {x: -485, y: -100}
   m_SizeDelta: {x: 201.11389, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &4194510983497206502
@@ -21857,7 +21860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "+5000  \u20BD"
+  m_text: "+25000  \u20BD"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7520820c43d0c9d41a6b924a06ca1bd2, type: 2}
   m_sharedMaterial: {fileID: -2759662498525375840, guid: 7520820c43d0c9d41a6b924a06ca1bd2, type: 2}
@@ -22596,7 +22599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notSupported: {fileID: 0}
   done: {fileID: 0}
-  showDialog: {fileID: 5970356067906405024}
+  showDialog: {fileID: 0}
   onPromptSuccess:
     m_PersistentCalls:
       m_Calls:
@@ -22607,7 +22610,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: -5000
+          m_IntArgument: -25000
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

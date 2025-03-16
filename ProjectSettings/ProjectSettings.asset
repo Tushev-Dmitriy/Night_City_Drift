@@ -670,19 +670,23 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
-    EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
-    GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
-    Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
-    PS4: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
-    PS5: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
-    QNX: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
-    Stadia: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
-    Standalone: UNITY_POST_PROCESSING_STACK_V2;DREAMTECK_SPLINES;PLUGIN_YG_2;Authorization_yg;AutoTranslateLangs_yg;Clipboard_yg;EnvirData_yg;Flags_yg;Fullscreen_yg;GameLabel_yg;InterstitialAdv_yg;Leaderboards_yg;Localization_yg;Metrica_yg;OpenURL_yg;Payments_yg;PlayerStats_yg;QuitGameEvent_yg;RedefinePlayerPrefs_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TV_yg;TMP_YG2;NJSON_YG2;RU_YG2;SORTIFY;YandexGamesPlatform_yg
-    VisionOS: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
-    WebGL: UNITY_POST_PROCESSING_STACK_V2;DREAMTECK_SPLINES;PLUGIN_YG_2;Authorization_yg;AutoTranslateLangs_yg;Clipboard_yg;EnvirData_yg;Flags_yg;Fullscreen_yg;GameLabel_yg;InterstitialAdv_yg;Leaderboards_yg;Localization_yg;Metrica_yg;OpenURL_yg;Payments_yg;PlayerStats_yg;QuitGameEvent_yg;RedefinePlayerPrefs_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TV_yg;TMP_YG2;NJSON_YG2;YandexGamesPlatform_yg;SORTIFY
-    XboxOne: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
-    tvOS: UNITY_POST_PROCESSING_STACK_V2;SORTIFY
+    Android: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN
+    EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN
+    GameCoreScarlett: DOTWEEN
+    GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN
+    LinuxHeadlessSimulation: DOTWEEN
+    Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN
+    PS4: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN
+    PS5: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN
+    QNX: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN
+    Stadia: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN
+    Standalone: UNITY_POST_PROCESSING_STACK_V2;DREAMTECK_SPLINES;PLUGIN_YG_2;Authorization_yg;AutoTranslateLangs_yg;Clipboard_yg;EnvirData_yg;Flags_yg;Fullscreen_yg;GameLabel_yg;InterstitialAdv_yg;Leaderboards_yg;Localization_yg;Metrica_yg;OpenURL_yg;Payments_yg;PlayerStats_yg;QuitGameEvent_yg;RedefinePlayerPrefs_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TV_yg;TMP_YG2;NJSON_YG2;RU_YG2;SORTIFY;YandexGamesPlatform_yg;DOTWEEN
+    VisionOS: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN
+    WebGL: UNITY_POST_PROCESSING_STACK_V2;DREAMTECK_SPLINES;PLUGIN_YG_2;Authorization_yg;AutoTranslateLangs_yg;Clipboard_yg;EnvirData_yg;Flags_yg;Fullscreen_yg;GameLabel_yg;InterstitialAdv_yg;Leaderboards_yg;Localization_yg;Metrica_yg;OpenURL_yg;Payments_yg;PlayerStats_yg;QuitGameEvent_yg;RedefinePlayerPrefs_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TV_yg;TMP_YG2;NJSON_YG2;YandexGamesPlatform_yg;SORTIFY;DOTWEEN
+    Windows Store Apps: DOTWEEN
+    XboxOne: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN
+    iPhone: DOTWEEN
+    tvOS: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

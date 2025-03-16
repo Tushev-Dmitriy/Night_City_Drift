@@ -10,9 +10,10 @@ public class MusicSelector : MonoBehaviour
     [SerializeField] private string[] trackNames;
     [SerializeField] private AudioClip[] audioClips;
 
-    private void Start()
+    private void OnEnable()
     {
         musicDropdown.ClearOptions();
+        musicDropdown.onValueChanged.RemoveAllListeners();
         musicDropdown.AddOptions(new System.Collections.Generic.List<string>(trackNames));
         int selectedTrackIndex = 0;
         musicDropdown.value = selectedTrackIndex;
@@ -31,8 +32,6 @@ public class MusicSelector : MonoBehaviour
 
         musicSource.clip = audioClips[index];
         musicSource.Play();
-
-        Debug.Log($"Track: {trackNames[index]}");
     }
 
     private void OnDisable()

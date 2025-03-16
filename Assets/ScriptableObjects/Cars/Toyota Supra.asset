@@ -16,7 +16,7 @@ MonoBehaviour:
   carPodiumObject: {fileID: 100914976448185422, guid: abb82d6ae444d274caddf64d11417a90, type: 3}
   carName: Toyota Supra
   carPrice: 110000
-  cameraOffset: {x: 0, y: 2, z: 3}
+  cameraOffset: {x: 0, y: 2, z: 4}
   carCharacteristics:
     maxSpeed: 170
     engineLvl: 8
