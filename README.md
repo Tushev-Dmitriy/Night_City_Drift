@@ -5,7 +5,7 @@
 <table style="margin-left: auto; margin-right: auto; width: 100%; border: none;">
 <tr>
     <td style="text-align: center; width: 30%; border: none;">
-        <img src="Assets/README/logo.png" alt="Логотип Night City Drift" width="400">
+        <img src="README/logo.png" alt="Логотип Night City Drift" width="400">
     </td>
     <td style="text-align: left; vertical-align: middle; width: 70%; border: none;">
         <strong>Night City Drift</strong> — это динамичный симулятор дрифта в ночном городе, созданный на Unity с использованием WebGL. Настраивайте машины, осваивайте заносы под огнями небоскребов и соревнуйтесь за звание лучшего.
@@ -24,19 +24,19 @@
 - Дрифтуйте по улицам с огнями небоскрёбов, погружайтесь в атмосферу ночного города.
 
 <div align="center">
-    <img src="Assets/README/driftG1.gif" alt="Дрифт в городе" width="350"/>
+    <img src="README/driftG1.gif" alt="Дрифт в городе" width="350"/>
 </div>
 
 - Меняйте цвет машины и колёс, улучшайте двигатель и выбирайте номер, чтобы создать уникальный автомобиль.
 
 <div align="center">
-    <img src="Assets/README/driftG2.gif" alt="Гараж и тюнинг" width="350"/>
+    <img src="README/driftG2.gif" alt="Гараж и тюнинг" width="350"/>
 </div>
 
 - Настраивайте игру под себя: изменяйте параметры и выбирайте саундтрек для идеального настроения.
 
 <div align="center">
-    <img src="Assets/README/driftG3.gif" alt="Настройки и музыка" width="350"/>
+    <img src="README/driftG3.gif" alt="Настройки и музыка" width="350"/>
 </div>
 
 <div align="center">⠀</div>
