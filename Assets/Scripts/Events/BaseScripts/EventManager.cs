@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -49,6 +50,7 @@ public class EventManager : MonoBehaviour
     private MainCarData currentCarData;
     private int currentCarIndex = 0;
     private bool isMobile = false;
+    private bool isGame = false;
 
     private void Awake()
     {
@@ -182,22 +184,28 @@ public class EventManager : MonoBehaviour
 
     IEnumerator StartGameFromUICor()
     {
-        settingsController.SetupSound(_userData);
-
-        AsyncOperation gameScene = SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
-
-        while (!gameScene.isDone)
+        if (!isGame)
         {
-            yield return null;
-        }
+            isGame = true;
 
-        carPodium.SetActive(false);
-        startCanvas.SetActive(false);
-        inGameCanvas.SetActive(true);
+            settingsController.SetupSound(_userData);
+
+            AsyncOperation gameScene = SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+
+            while (!gameScene.isDone)
+            {
+                yield return null;
+            }
+
+            carPodium.SetActive(false);
+            startCanvas.SetActive(false);
+            inGameCanvas.SetActive(true);
+        }
     }
 
     public void SetupGarage()
     {
+        isGame = false;
         startCanvas.SetActive(true);
         inGameCanvas.SetActive(false);
         carPodium.SetActive(true);

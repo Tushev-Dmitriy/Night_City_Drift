@@ -383,10 +383,10 @@ MonoBehaviour:
     autoApplySettings: 1
     autoPauseGame: 1
     editEventSystem: 1
-    autoGRA: 1
+    autoGRA: 0
     logInEditor: 1
     archivingBuild: 1
-    syncInitSDK: 1
+    syncInitSDK: 0
     loadSceneIfSDKLate: 0
     loadSceneIndex: 0
     simulationLoadScene: 0
@@ -403,7 +403,7 @@ MonoBehaviour:
     gradientBackgroundByLoadGame:
       radial: 0
       angleInclination: 140
-      color1: {r: 1, g: 0.831, b: 0.149, a: 1}
+      color1: {r: 1, g: 0.1490196, b: 0.2562301, a: 1}
       color2: {r: 0.36, g: 0.09, b: 1, a: 1}
     customProgressBar: 1
     progressBarSettigs:
@@ -411,8 +411,8 @@ MonoBehaviour:
       roundAngle: 10
       width: 30
       height: 24
-      color1: {r: 0.25, g: 0.6392, b: 1, a: 1}
-      color2: {r: 1, g: 0.831, b: 0.149, a: 0.7}
+      color1: {r: 0.36675215, g: 0, b: 1, a: 1}
+      color2: {r: 1, g: 0.8018433, b: 0, a: 0.7}
     fixedAspectRatio: 0
     aspectRatio: 16/9
     fillBackground: 0

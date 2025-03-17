@@ -670,7 +670,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN
+    Android: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN;PLUGIN_YG_2;YandexGamesPlatform_yg;Authorization_yg;AutoTranslateLangs_yg;Clipboard_yg;EnvirData_yg;Flags_yg;Fullscreen_yg;GameLabel_yg;InterstitialAdv_yg;Leaderboards_yg;Localization_yg;Metrica_yg;OpenURL_yg;Payments_yg;PlayerStats_yg;QuitGameEvent_yg;RedefinePlayerPrefs_yg;Review_yg;RewardedAdv_yg;ServerTime_yg;StickyAdv_yg;Storage_yg;TV_yg;TMP_YG2;NJSON_YG2;DREAMTECK_SPLINES
     EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN
     GameCoreScarlett: DOTWEEN
     GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2;SORTIFY;DOTWEEN

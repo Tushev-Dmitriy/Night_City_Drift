@@ -2,6 +2,7 @@ using UnityEngine;
 using Dreamteck.Splines;
 using System.Collections;
 using Unity.VisualScripting;
+using static UnityEngine.AudioSettings;
 
 public class HighwayTrafficController : MonoBehaviour
 {
@@ -12,8 +13,13 @@ public class HighwayTrafficController : MonoBehaviour
     [SerializeField] private float speedHighway; // Скорость движения машин на хайвее
     [SerializeField] private int initialCarCountHighway; // Количество машин на хайвее
 
-    private void Start()
+    public void StartSpawn(bool isMobile)
     {
+        if (isMobile)
+        {
+            initialCarCountHighway /= 3;
+        }
+
         roadSpline.sampleMode = SplineComputer.SampleMode.Uniform;
         roadSplineReverse.sampleMode = SplineComputer.SampleMode.Uniform;
 

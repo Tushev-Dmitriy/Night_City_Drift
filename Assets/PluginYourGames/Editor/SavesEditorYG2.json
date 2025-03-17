@@ -13,10 +13,10 @@
         false,
         false
     ],
-    "idSave": 2368,
-    "moneyCount": 217160,
+    "idSave": 2521,
+    "moneyCount": 173510,
     "carVolume": -57.12174987792969,
-    "musicVolume": -14.155793190002442,
+    "musicVolume": -31.113319396972658,
     "maxScore": 2290,
     "cars": [
         {
@@ -37,16 +37,16 @@
         },
         {
             "carName": "BMW M3 E30",
-            "maxSpeed": 170,
-            "engineLvl": 8,
-            "steeringAngleLvl": 30,
-            "brakeLvl": 500,
+            "maxSpeed": 190,
+            "engineLvl": 10,
+            "steeringAngleLvl": 45,
+            "brakeLvl": 600,
             "haveNitro": true,
-            "haveTurbine": false,
-            "carPlate": "Т007ТТ777",
-            "carBodyColorR": 1.0,
-            "carBodyColorG": 0.0,
-            "carBodyColorB": 0.0,
+            "haveTurbine": true,
+            "carPlate": "О001ОО001",
+            "carBodyColorR": 0.00791015662252903,
+            "carBodyColorG": 1.0,
+            "carBodyColorB": 1.0,
             "carWheelColorR": 1.0,
             "carWheelColorG": 1.0,
             "carWheelColorB": 1.0
@@ -135,17 +135,17 @@
             "carName": "BMW M5 F90",
             "maxSpeed": 190,
             "engineLvl": 10,
-            "steeringAngleLvl": 40,
+            "steeringAngleLvl": 45,
             "brakeLvl": 600,
             "haveNitro": false,
-            "haveTurbine": false,
+            "haveTurbine": true,
             "carPlate": "Х999УН777",
-            "carBodyColorR": 1.0,
+            "carBodyColorR": 0.0,
             "carBodyColorG": 0.0,
             "carBodyColorB": 0.0,
             "carWheelColorR": 0.0,
-            "carWheelColorG": 1.0,
-            "carWheelColorB": 1.0
+            "carWheelColorG": 0.0,
+            "carWheelColorB": 0.0
         }
     ],
     "userCarsName": [

@@ -10,8 +10,13 @@ public class CityTrafficController : MonoBehaviour
     [SerializeField] private float speed; // Скорость движения машин в городе
     [SerializeField] private int initialCarCount; // Количество машин в городе
 
-    private void Start()
+    public void StartSpawn(bool isMobile)
     {
+        if (isMobile)
+        {
+            initialCarCount /= 3;
+        }
+
         citySpline.sampleMode = SplineComputer.SampleMode.Uniform;
         StartCoroutine(SpawnCarsWithDelay());
     }

@@ -9,6 +9,8 @@ public class UI_Controller : MonoBehaviour
     [SerializeField] PrometeoCarController carController;
     [SerializeField] DriftController driftController;
     [SerializeField] CarController carDataController;
+    [SerializeField] HighwayTrafficController highwayTrafficController;
+    [SerializeField] CityTrafficController cityTrafficController;
 
     EventManager _eventManager;
 
@@ -17,7 +19,9 @@ public class UI_Controller : MonoBehaviour
     private void Start()
     {
         _eventManager = FindObjectOfType<EventManager>();
-        mobileControllers = _eventManager.GetMobileControllers();
+
+        cityTrafficController.StartSpawn(_eventManager.IsMobile());
+        highwayTrafficController.StartSpawn(_eventManager.IsMobile());
 
         SetCurrentCar();
 
@@ -44,6 +48,8 @@ public class UI_Controller : MonoBehaviour
 
         if (_eventManager.IsMobile())
         {
+            mobileControllers = _eventManager.GetMobileControllers();
+
             carController.useTouchControls = true;
             carController.throttleButton = mobileControllers.transform.GetChild(0).gameObject;
             carController.reverseButton = mobileControllers.transform.GetChild(1).gameObject;
