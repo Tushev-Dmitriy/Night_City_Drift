@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using YG;
 
 public class InitManager : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class InitManager : MonoBehaviour
             yield return null;
         }
 
+        YG2.GameReadyAPI();
         SceneManager.UnloadSceneAsync("Init");
     }
 }

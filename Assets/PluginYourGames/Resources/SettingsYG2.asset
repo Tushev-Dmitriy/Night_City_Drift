@@ -24,8 +24,8 @@ MonoBehaviour:
     domainAutoLocalization: com
     languages:
       ru: 1
-      en: 1
-      tr: 1
+      en: 0
+      tr: 0
       az: 0
       be: 0
       he: 0
@@ -386,7 +386,7 @@ MonoBehaviour:
     autoGRA: 1
     logInEditor: 1
     archivingBuild: 1
-    syncInitSDK: 0
+    syncInitSDK: 1
     loadSceneIfSDKLate: 0
     loadSceneIndex: 0
     simulationLoadScene: 0
@@ -445,4 +445,4 @@ MonoBehaviour:
     dataCaching: 1
     colorSpace: 1
     archivingBuild: 1
-    syncInitSDK: 0
+    syncInitSDK: 1

@@ -13,10 +13,10 @@
         false,
         false
     ],
-    "idSave": 2251,
-    "moneyCount": 223690,
-    "carVolume": -68.58043670654297,
-    "musicVolume": -46.02523422241211,
+    "idSave": 2368,
+    "moneyCount": 217160,
+    "carVolume": -57.12174987792969,
+    "musicVolume": -14.155793190002442,
     "maxScore": 2290,
     "cars": [
         {
@@ -27,7 +27,7 @@
             "brakeLvl": 300,
             "haveNitro": false,
             "haveTurbine": false,
-            "carPlate": "В205ХУ143",
+            "carPlate": "А777УЕ077",
             "carBodyColorR": 0.0,
             "carBodyColorG": 0.0,
             "carBodyColorB": 0.0,
