@@ -14,7 +14,7 @@
 </table>
 
 <div align="center">
-    <i><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><strong>Игра доступна на Яндекс Играх</strong></a></i>
+    <i><strong>Игра доступна на Яндекс Играх (еще на стадии модерации)</strong></i>
 </div>
 
 <div align="left">
