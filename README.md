@@ -14,7 +14,7 @@
 </table>
 
 <div align="center">
-    <i><strong>Игра доступна на Яндекс Играх (еще на стадии модерации)</strong></i>
+    <i><a href="https://yandex.ru/games/app/418881?lang=ru"><strong>Игра доступна на Яндекс Играх</strong></a></i>
 </div>
 
 <div align="left">
